@@ -18,6 +18,7 @@ html{
 
 }
 .header{
+    margin-top: 15px;
     padding: 1rem 7%;
     display: flex;
     justify-content: space-between;
