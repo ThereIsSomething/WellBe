@@ -46,6 +46,14 @@ html{
     margin: 3.5rem;
     position: relative;
 }
+#nav-div.scrolled {
+    backdrop-filter: blur(100px); /* Solid white background on scroll */
+    box-shadow: 0 9px 18px purple; /* Subtle shadow */
+}
+
+#nav-div.scrolled .navbar a {
+    color: #333; /* Darker color for text after scrolling */
+}
 .navbar a:after{
     content: '';
     background: var(--secclr);
