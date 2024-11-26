@@ -1,10 +1,238 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Title</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WellBe AI Feedback Bot</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+        .chat-container {
+            max-width: 400px;
+            margin: 50px auto;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            background-color: #fff;
+        }
+        .chat-header {
+            background: linear-gradient(135deg, #6a11cb, #2575fc); /* Purple to Blue Gradient */
+            color: #fff;
+            padding: 15px;
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+            position: relative;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle Shadow */
+        }
+        .chat-header span {
+            font-size: 14px;
+            display: block;
+            margin-top: 5px;
+            font-style: italic;
+        }
+        .chat-body {
+            padding: 10px;
+        }
+        .question {
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .rating-options {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 20px;
+        }
+        .rating-option {
+            text-align: center;
+        }
+        .rating-option input {
+            display: none;
+        }
+        .rating-option label {
+            cursor: pointer;
+            font-size: 14px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transition: background-color 0.3s, border 0.3s;
+        }
+        .rating-option label.highlighted {
+            background-color: #007BFF; /* Highlight color */
+            color: white;
+            border-radius: 10px;
+            padding: 5px 10px;
+            border: 2px solid #0056b3;
+        }
+        .message-box {
+            display: none;
+            margin-top: 10px;
+        }
+        .message-box textarea {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            font-size: 14px;
+        }
+        .navigation-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+        }
+        button {
+            padding: 10px 15px;
+            font-size: 14px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: #007BFF;
+            color: white;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        button:disabled {
+            background-color: #ddd;
+            cursor: not-allowed;
+        }
+        .thank-you {
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+            color: #007BFF;
+        }
+    </style>
 </head>
 <body>
+<div class="chat-container">
+    <div class="chat-header">
+        WellBe AI
+        <span>Your wellness companion</span>
+    </div>
+    <div class="chat-body">
+        <div id="questionContainer"></div>
+        <div id="ratingOptions" class="rating-options"></div>
+        <div id="messageBox" class="message-box">
+            <textarea id="feedbackReason" rows="3" placeholder="Can you tell us why?"></textarea>
+            <button onclick="submitReason()">Submit</button>
+        </div>
+        <div id="navigationButtons" class="navigation-buttons">
+            <button id="prevButton" onclick="prevQuestion()">Previous</button>
+            <button id="nextButton" onclick="nextQuestion()">Next</button>
+        </div>
+    </div>
+</div>
+<script>
+    const questions = [
+        "Rate your experience with our AI Companion:",
+        "Rate your experience with our Live Mentor:",
+        "At which scale were we able to reduce your stress?",
+        "Did you like our personalized recommendations?",
+        "How likely are you to recommend WellBe to your family and friends?"
+    ];
 
+    const emojis = [
+        { emoji: "😡", label: "Disappointed" },
+        { emoji: "😟", label: "Not Satisfied" },
+        { emoji: "😐", label: "Neutral" },
+        { emoji: "😊", label: "Satisfied" },
+        { emoji: "😍", label: "Very Satisfied" },
+    ];
+
+    let feedback = {};
+    let currentQuestion = 0;
+
+    const questionContainer = document.getElementById('questionContainer');
+    const ratingOptions = document.getElementById('ratingOptions');
+    const messageBox = document.getElementById('messageBox');
+    const feedbackReason = document.getElementById('feedbackReason');
+    const prevButton = document.getElementById('prevButton');
+    const nextButton = document.getElementById('nextButton');
+    const navigationButtons = document.getElementById('navigationButtons');
+
+    const loadQuestion = () => {
+        messageBox.style.display = 'none'; // Hide message box initially
+        feedbackReason.value = ''; // Reset message box text
+
+        // Update question
+        questionContainer.innerHTML = `<div class="question">${questions[currentQuestion]}</div>`;
+
+        // Update rating options
+        ratingOptions.innerHTML = '';
+        emojis.forEach((emoji, index) => {
+            const option = document.createElement('div');
+            option.className = 'rating-option';
+            option.innerHTML = `
+          <input type="radio" id="option-${currentQuestion}-${index}" name="question-${currentQuestion}" value="${index + 1}" ${feedback[currentQuestion] === index + 1 ? 'checked' : ''}>
+          <label for="option-${currentQuestion}-${index}" class="${feedback[currentQuestion] === index + 1 ? 'highlighted' : ''}">
+            <span>${emoji.emoji}</span>
+            <div>${emoji.label}</div>
+          </label>
+        `;
+            option.querySelector('input').addEventListener('change', () => {
+                feedback[currentQuestion] = index + 1;
+
+                // Highlight the selected option
+                document.querySelectorAll('.rating-option label').forEach((label) => label.classList.remove('highlighted'));
+                option.querySelector('label').classList.add('highlighted');
+
+                // Show message box if Neutral, Not Satisfied, or Disappointed is selected
+                if (index <= 2) {
+                    messageBox.style.display = 'block';
+                } else {
+                    messageBox.style.display = 'none';
+                }
+            });
+            ratingOptions.appendChild(option);
+        });
+
+        // Update navigation buttons
+        prevButton.disabled = currentQuestion === 0;
+        nextButton.textContent = currentQuestion === questions.length - 1 ? 'Submit' : 'Next';
+    };
+
+    const prevQuestion = () => {
+        if (currentQuestion > 0) {
+            currentQuestion--;
+            loadQuestion();
+        }
+    };
+
+    const nextQuestion = () => {
+        if (currentQuestion < questions.length - 1) {
+            currentQuestion++;
+            loadQuestion();
+        } else {
+            // Display thank you screen with animation
+            navigationButtons.style.display = 'none';
+            questionContainer.innerHTML = `<div class="thank-you">Thank you for your feedback, guys!</div>`;
+            ratingOptions.innerHTML = '';
+            console.log("Feedback submitted:", feedback);
+        }
+    };
+
+    const submitReason = () => {
+        const reason = feedbackReason.value.trim();
+        if (reason) {
+            feedback[`reason-${currentQuestion}`] = reason;
+            messageBox.style.display = 'none';
+            nextQuestion(); // Automatically move to the next question
+        } else {
+            alert("Please provide your reason before submitting.");
+        }
+    };
+
+    // Initialize the first question
+    loadQuestion();
+</script>
 </body>
 </html>
