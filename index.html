@@ -10,25 +10,111 @@
             rel="stylesheet"
             href="https://unpkg.com/swiper/swiper-bundle.min.css">
 </head>
+
+
+
 <body>
-
-<header class="header">
+<header class="header" id="home1">
     <img src="https://i0.wp.com/skyje.com/wp-content/uploads/2016/10/medical-logo-600x284.png?resize=600%2C284" id="logo" alt="">
-
-    <nav class="navbar">
+    <div id="nav-div">
+       <nav class="navbar">
         <a href="#">home</a>
-        <a href="#">about</a>
+        <a href="#" id="aboutBtn">about</a>
         <a href="#">services</a>
         <a href="#">contact</a>
-    </nav>
+        </nav>
+    </div>
 
     <div class="icons">
         <div id="menubar" class="fas fa-bars"></div>
-        <a href="#">Chat</a>
+        <a href="#">Sign Up</a>
     </div>
 </header>
+<!-- Modal -->
+<div id="aboutModal" class="modal">
+    <button class="close-btn" id="closeBtn">&times;</button>
+    <div class="about-section">
+        <!-- Section 1 -->
+        <div class="section alt">
+            <div class="content">
+                <h2>Who We Are</h2>
+                <p style="color:white">We are WellBe, a platform dedicated to enhancing mental well-being through AI-driven solutions and personalized guidance.</p>
+            </div>
+            <div class="image1">
+                <img src="https://i.imgur.com/lwr3P4o.jpeg" alt="Who We Are">
+            </div>
+        </div>
 
-<div class="background-image">
+        <!-- Section 2 -->
+        <div class="section">
+            <div class="image2">
+                <img src="https://i.imgur.com/o46MvOS.jpeg" alt="What Problem Are We Solving">
+            </div>
+            <div class="content">
+                <h2>What Problem Are We Solving?</h2>
+                <p style="color:white">We aim to alleviate mental stress by offering live mentorship, tailored recommendations, and an AI companion for constant support.</p>
+            </div>
+        </div>
+
+        <!-- New Sections -->
+        <div class="section alt">
+            <div class="content">
+                <h>Our Vision</h>
+                <p style="color:white">To create a world where mental health is prioritized and accessible to everyone, fostering a balanced and fulfilling life.</p>
+            </div>
+            <div class="image">
+                <img src="https://source.unsplash.com/400x400/?mindfulness,vision" alt="Our Vision">
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="image">
+                <img src="https://source.unsplash.com/400x400/?values,integrity" alt="Our Values">
+            </div>
+            <div class="content">
+                <h2>Our Values</h2>
+                <p style="color:white">We believe in empathy, integrity, and continuous improvement to provide the best support for your mental well-being journey.</p>
+            </div>
+        </div>
+
+        <!-- FAQ Section -->
+        <div class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq">
+                <h3>What makes WellBe different?</h3>
+                <div class="faq-content">
+                    <p>We combine AI technology with human mentorship for unique experiences.</p>
+                </div>
+            </div>
+            <div class="faq">
+                <h3>Is my data secure?</h3>
+                <div class="faq-content">
+                    <p>Absolutely. We prioritize privacy and confidentiality.</p>
+                </div>
+            </div>
+            <div class="faq">
+                <h3>How can I get started?</h3>
+                <div class="faq-content">
+                    <p>Sign up, complete a brief survey, and start with our AI-guided mentorship.</p>
+                </div>
+            </div>
+            <div class="faq">
+                <h3>Are live mentors certified professionals?</h3>
+                <div class="faq-content">
+                    <p>Yes, all mentors undergo rigorous training and certification to support your needs.</p>
+                </div>
+            </div>
+            <div class="faq">
+                <h3>Can I customize my experience?</h3>
+                <div class="faq-content">
+                    <p>Absolutely. Our platform is designed to tailor recommendations and interactions to your preferences.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="background-image" id="home2">
     <div class="background-content">
         <h1 style="color:white">provide an exceptional <br> Relaxing experience</h1>
         <p style="color:white">At WellBe, we harness the power of artificial intelligence to provide <br>accessible, personalized, and effective mental health support </br></p>
@@ -182,7 +268,34 @@
     </div>
 </div>
 </div>
-<script src="script.js"></script>
+<!--<script src="script.js"></script>-->
+<script>
+    const aboutBtn = document.getElementById('aboutBtn');
+    const aboutModal = document.getElementById('aboutModal');
+    const closeBtn = document.getElementById('closeBtn');
+    const homeContent1 = document.getElementById('home1');
+    const homeContent2 = document.getElementById('home2');
+
+    aboutBtn.addEventListener('click', () => {
+        aboutModal.classList.add('open');
+        homeContent1.classList.add('blurred');
+        homeContent2.classList.add('blurred');
+    });
+
+    closeBtn.addEventListener('click', () => {
+        aboutModal.classList.remove('open');
+        homeContent1.classList.remove('blurred');
+        homeContent2.classList.remove('blurred');
+    });
+
+    // Toggle FAQ functionality
+    document.querySelectorAll('.faq h3').forEach(faqHeader => {
+        faqHeader.addEventListener('click', () => {
+            const content = faqHeader.nextElementSibling;
+            content.classList.toggle('open');
+        });
+    });
+</script>
 </body>
 </html>
 
