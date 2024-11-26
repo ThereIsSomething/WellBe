@@ -88,6 +88,7 @@ html{
     font-size: 1.5rem;
     border-radius: 10px;
     transition: .5s;
+    box-shadow: 0 9px 18px purple;
 }
 .icons a:hover{
     background: transparent;
