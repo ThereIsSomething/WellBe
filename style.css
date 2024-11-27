@@ -28,10 +28,71 @@ html{
     right: 0;
     z-index: 1000;
 }
-.header #logo{
-    height:60px;
-    width: 150px;
+.font-logo {
+    font-family: 'JetBrains Mono Light', sans-serif; /* Replace with your font name */
+    font-size: 24px; /* Adjust size as needed */
+    font-weight: bold;
+    color: white;
+    line-height: 1.2;
+    text-align: center;
+    animation: rotatingGlow 1.5s infinite ease-in-out;
+    text-shadow:
+            0 0 5px rgba(255, 255, 255, 0.8), /* Subtle inner glow */
+            0 0 10px rgba(255, 255, 255, 0.6), /* Medium outer glow */
+            0 0 20px rgba(255, 255, 255, 0.4), /* Larger spread glow */
+            0 0 30px rgba(255, 255, 255, 0.2); /* Extended glow */
+}
 
+.font-logo .dot {
+    display: inline-block;       /* Makes the dot an inline block */
+    width: 5px;                 /* Width of the dot */
+    height: 5px;                /* Height of the dot */
+    background-color: red;       /* Color of the dot */
+    border-radius: 50%;          /* Makes it round */
+    vertical-align: auto;      /* Aligns the dot with the text */
+    margin-left: 3px;            /* Add a little space from 'Well' */
+    margin-right: 3px;           /* Add a little space before 'Be' */
+}
+
+/*!* Optional: Remove any text content in the dot span *!*/
+/*.font-logo .dot::before {*/
+/*    content: "";                 !* Ensures no extra text inside the span *!*/
+/*    display: inline-block;*/
+/*}*/
+
+@keyframes rotatingGlow {
+    0% {
+        text-shadow:
+                0 0 5px rgba(255, 255, 255, 0.8),
+                5px 0 10px rgba(255, 0, 0, 0.6),
+                -5px 0 15px rgba(0, 255, 0, 0.6);
+    }
+    50% {
+        text-shadow:
+                -5px 0 10px rgba(255, 255, 255, 0.8),
+                0 5px 15px rgba(0, 255, 0, 0.6),
+                5px -5px 20px rgba(255, 0, 0, 0.6);
+    }
+    100% {
+        text-shadow:
+                0 0 5px rgba(255, 255, 255, 0.8),
+                5px 0 10px rgba(255, 0, 0, 0.6),
+                -5px 0 15px rgba(0, 255, 0, 0.6);
+    }
+}
+
+
+.font-logo small {
+    display: block;
+    font-size: 12px; /* Adjust for smaller text */
+    color: white;
+    font-weight: normal;
+    animation: rotatingGlow 1.5s infinite ease-in-out;
+    text-shadow:
+            0 0 5px rgba(255, 255, 255, 0.8), /* Subtle inner glow */
+            0 0 10px rgba(255, 255, 255, 0.6), /* Medium outer glow */
+            0 0 20px rgba(255, 255, 255, 0.4), /* Larger spread glow */
+            0 0 30px rgba(255, 255, 255, 0.2); /* Extended glow */
 }
 #nav-div{
     display: flex;
