@@ -1,6 +1,6 @@
 :root{
     --mainclr: #000000;
-    --secclr:#ff5d22;
+    --secclr: #730492;
     --third:#DFE4E0;
     --mainafterclr:hsl(167, 81%, 79%);
 }
@@ -244,7 +244,7 @@ html{
     margin-bottom: 30px;
 }
 .about-content a{
-    background: var(--secclr);
+    background: linear-gradient(90deg, #6a11cb, #ff0000);
     border-radius: 8px;
     padding: 1rem 3rem;
     font-size: 1.5rem;
@@ -414,7 +414,7 @@ html{
 
 /* width */
 ::-webkit-scrollbar {
-    width: 20px;
+    width: 2.5px;
 }
 
 /* Track */
@@ -425,8 +425,8 @@ html{
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    background: var(--secclr);
-    border-radius: 10px;
+    background:linear-gradient(90deg,#6a11cb, #ff0000) ;
+    border-radius: 4px;
 }
 
 /* Handle on hover */
