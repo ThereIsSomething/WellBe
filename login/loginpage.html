@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WellBe Login & Signup</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="background">
+
+    <div class="flex-container">
+        <!-- Left Section -->
+        <div class="left-section">
+            <img src="https://i.imgur.com/126cWea.gif" alt="WellBe">
+            <p class="app-tagline">Connect. Reflect. Thrive.</p>
+        </div>
+
+        <!-- Right Section -->
+        <div class="right-section">
+
+            <!-- Login Form -->
+            <div class="form-container active" id="loginForm">
+                <h2 class="form-title">Welcome Back</h2>
+                <p class="form-subtitle">Log in to continue your journey.</p>
+                <form id="login">
+                    <input type="email" id="loginEmail" placeholder="Email" required>
+                    <input type="password" id="loginPassword" placeholder="Password" required>
+                    <button type="submit">Login</button>
+                    <p>Don't have an account? <a href="#" onclick="toggleForms()">Sign up</a></p>
+                    <p><a href="#">Forgotten your password?</a></p>
+                </form>
+            </div>
+
+            <!-- Signup Form -->
+            <div class="form-container hidden" id="signupForm">
+                <h2 class="form-title">Join WellBe</h2>
+                <p class="form-subtitle">Sign up and start exploring.</p>
+                <form id="signup">
+                    <input type="text" id="signupName" placeholder="Full Name" required>
+                    <input type="email" id="signupEmail" placeholder="Email" required>
+                    <input type="password" id="signupPassword" placeholder="Password" required>
+                    <button type="submit">Sign Up</button>
+                    <p>Already have an account? <a href="#" onclick="toggleForms()">Login</a></p>
+
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
