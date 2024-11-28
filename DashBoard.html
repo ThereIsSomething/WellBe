@@ -1,0 +1,152 @@
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(to bottom right, #4A1D87, #1D0038);
+      color: #ffffff;
+    }
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 2rem;
+    }
+    .glass {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 1rem;
+      padding: 2rem;
+      backdrop-filter: blur(20px);
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+    }
+    .nav-link {
+      color: rgba(255, 255, 255, 0.7);
+      transition: color 0.2s ease;
+    }
+    .nav-link:hover {
+      color: #ffffff;
+    }
+    .stat-card {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 1rem;
+      padding: 1.5rem;
+      text-align: center;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+    .stat-card h3 {
+      margin-top: 0.5rem;
+      font-size: 1.5rem;
+    }
+    .stat-card small {
+      color: rgba(255, 255, 255, 0.7);
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <!-- Header -->
+  <header class="flex justify-between items-center mb-8">
+    <div class="text-3xl font-bold" style="font-family: 'JetBrains Mono Light', sans-serif">Well<span style="color:red">.</span>Be</div>
+    <nav class="flex space-x-8">
+      <a href="#" class="nav-link">Dashboard</a>
+      <a href="#" class="nav-link">My Journal</a>
+      <a href="#" class="nav-link">Therapy</a>
+      <a href="#" class="nav-link">Reports</a>
+      <a href="#" class="nav-link">Settings</a>
+    </nav>
+    <div class="flex items-center space-x-4">
+      <div id="realTimeClock" style="font-size: 1.5rem; font-weight: bold; color: #ffffff;"></div>
+      <div class="separator" style="color: Black; font-size: 22px;"> | </div>
+      <div class="flex items-center space-x-2">
+        <img src="https://img.icons8.com/fluency-systems-regular/37/user-menu-male.png" alt="User" class="rounded-full" />
+        <div class="text-sm font-semibold" style="color:white; margin-left: 15px; font-size: 1rem">Jash Patel</div>
+    </div>
+  </header>
+
+  <!-- Content -->
+  <div class="glass">
+    <div class="mb-8">
+      <h2 class="text-2xl font-bold">Overall Statistics</h2>
+      <div class="grid grid-cols-3 gap-8 mt-6">
+        <div class="stat-card">
+          <small>Upcoming therapy sessions</small>
+          <h3>6</h3>
+          <small class="text-green-500">+20% this month</small>
+        </div>
+        <div class="stat-card">
+          <small>Mood score</small>
+          <h3>74.1</h3>
+          <small class="text-green-500">+1 point this month</small>
+        </div>
+        <div class="stat-card">
+          <small>Mindfulness Minutes</small>
+          <h3>120</h3>
+          <small class="text-red-500">-29% this month</small>
+        </div>
+      </div>
+    </div>
+
+    <div class="mb-8">
+      <h2 class="text-2xl font-bold mb-4">Session Schedule</h2>
+      <table class="w-full text-left text-sm">
+        <thead>
+        <tr class="text-gray-400">
+          <th class="py-2">Therapist</th>
+          <th class="py-2">Time</th>
+          <th class="py-2">Date</th>
+          <th class="py-2">Session type</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr class="border-t border-gray-700">
+          <td class="py-2">Dr. Medha</td>
+          <td class="py-2">10:00 AM</td>
+          <td class="py-2">2024-04-29</td>
+          <td class="py-2">Individual Mental Therapy</td>
+        </tr>
+        <!-- Add other rows here -->
+        </tbody>
+      </table>
+    </div>
+
+    <div class="grid grid-cols-2 gap-8">
+      <div class="flex items-center justify-between bg-gray-800 rounded-lg p-6">
+        <div>
+          <h3 class="text-lg font-bold">Inner Harmony Hues</h3>
+          <p class="text-sm text-gray-400">Take a mental voyage to inner sanctuaries</p>
+        </div>
+        <div class="flex space-x-2">
+          <button class="bg-gray-700 p-2 rounded-full"><i class="fas fa-backward"></i></button>
+          <button class="bg-gray-700 p-2 rounded-full"><i class="fas fa-play"></i></button>
+          <button class="bg-gray-700 p-2 rounded-full"><i class="fas fa-forward"></i></button>
+        </div>
+      </div>
+      <div class="flex items-center justify-between bg-gray-800 rounded-lg p-6">
+        <div>
+          <h3 class="text-lg font-bold">Download your mental wellness report</h3>
+        </div>
+        <button class="bg-blue-600 p-3 rounded-lg flex items-center space-x-2">
+          <i class="fas fa-download"></i>
+          <span>Download</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  function updateTime() {
+    const now = new Date();
+    const hours = now.getHours().toString().padStart(2, '0');
+    const minutes = now.getMinutes().toString().padStart(2, '0');
+    document.getElementById('realTimeClock').textContent = `${hours}:${minutes}`;
+  }
+  setInterval(updateTime, 1000);
+  updateTime();
+</script>
+</body>
+</html>
