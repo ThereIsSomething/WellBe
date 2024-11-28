@@ -155,15 +155,9 @@ html{
 .navbar.active{
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 }
-.background-image{
-    background: url(https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiktjRStsDSe6ObpGpxUdIBdTWaQhQFG1U1lyt3WcqtRN8HNQ12aKoJ9HPAgJ-Xu08Lm83lT_hRJ-HOdZSaFtfiIo47VODsVO8NVn3waV0S_VsEYL-Y3ml54tPYaG5q6woBnSSQ1N1XPl4NY5zRgcjcvUnzKBshWwc7AzIp5H4VYBaxKi9Lb6hoFXn7QVI/s2160/360_F_562116144_lxZOlafYtRtv8BzmKTKGcNby0D37ZVTZ.jpg);
-    width: 100%;
-    height: 100vh;
-    background-size: cover;
-    background-repeat: no-repeat;
-    padding-top: 6%;
-    position: relative;
-    box-shadow: 0px 9px 18px purple;
+.blue video{
+    max-width: 100%;
+    width:2000px;
 
 }
 .background-content{
@@ -655,6 +649,3 @@ html{
         text-align: center;
     }
 }
-
-
-
