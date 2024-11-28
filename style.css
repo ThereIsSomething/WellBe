@@ -162,8 +162,8 @@ html{
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 }
 .blue video{
-    max-width: 100vh;
-    max-height:100vh;
+    max-width: 100%;
+    width:2000px;
 
 }
 .background-content{
