@@ -54,12 +54,6 @@ html{
     margin-right: 3px;           /* Add a little space before 'Be' */
 }
 
-/*!* Optional: Remove any text content in the dot span *!*/
-/*.font-logo .dot::before {*/
-/*    content: "";                 !* Ensures no extra text inside the span *!*/
-/*    display: inline-block;*/
-/*}*/
-
 @keyframes rotatingGlow {
     0% {
         text-shadow:
@@ -452,7 +446,7 @@ html{
         display: initial;
     }
 
-    .navbar {
+    .navbar{
         position: absolute;
         top: 100%;
         left: 0;
