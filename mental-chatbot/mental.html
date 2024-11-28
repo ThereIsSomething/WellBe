@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Personal Therapist</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="mental.css">
+</head>
+<body class="bg-gray-100">
+<div class="chat-container max-w-md mx-auto h-screen flex flex-col">
+  <div class="chat-header bg-green-600 text-white p-4 flex items-center">
+    <div class="header-left flex items-center">
+      <div class="back-icon mr-4">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+        </svg>
+      </div>
+      <div class="profile-pic w-10 h-10 rounded-full bg-white mr-3"></div>
+      <div class="chat-info">
+        <h2 class="text-lg font-semibold">Personal Therapist AI</h2>
+        <p class="text-sm text-gray-200">Online • Always Available</p>
+      </div>
+    </div>
+    <div class="header-right flex items-center">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+      </svg>
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v.01M12 12v.01M12 19v.01M12 6a2 2 0 110-4 2 2 0 010 4zm0 7a2 2 0 110-4 2 2 0 010 4zm0 7a2 2 0 110-4 2 2 0 010 4z" />
+      </svg>
+    </div>
+  </div>
+  <div class="chat-background flex-grow overflow-y-auto p-4" id="chatMessages">
+
+    <div class="message received mb-4 max-w-xs">
+      <div class="bg-white p-3 rounded-lg shadow-md">
+        Hi there! I'm your AI Personal Therapist. I'm here to listen and support you. How are you feeling today?
+      </div>
+      <div class="text-xs text-gray-500 mt-1">Just now</div>
+    </div>
+  </div>
+
+
+  <div class="chat-input bg-white p-4 flex items-center">
+    <button class="mr-2">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+      </svg>
+    </button>
+    <input type="text" id="messageInput" placeholder="Type a message" class="flex-grow p-2 bg-gray-100 rounded-lg mr-2">
+    <button id="sendButton">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 5l7 7-7 7M5 5l7 7-7 7" />
+      </svg>
+    </button>
+  </div>
+</div>
+
+<script src="mental.js"></script>
+</body>
+</html>
