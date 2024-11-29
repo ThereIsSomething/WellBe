@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Contact.css">
+</head>
+<body>
+    <section id="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <p>If you have any questions, feel free to reach out!</p>
+            <form id="contact-form" action="#" method="post">
+                <div class="input-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                </div>
+                <div class="input-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                </div>
+                <div class="input-group">
+                    <label for="number">Phone Number:</label>
+                    <input type="tel" id="number" name="number" maxlength="10" placeholder="Enter your Number" required>
+                </div>
+                <div class="input-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" placeholder="Issue Facing" required></textarea>
+                </div>
+                <button type="submit" onclick="alert('Check the details before submitting')">SUBMIT</button>
+            </form>
+            <br>
+            <footer>
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <h3>Email</h3>
+                        <p><a href="mailto: NAME@gmail.com" target="_blank">NAME@EMAIL.COM</a></p>
+                    </div>
+                
+                    <div class="info-details">
+                        <h3>Follow Us</h3>
+                        <p>
+                            <a href="https://twitter.com/PAGENAME" target="_blank">Twitter</a><br>
+                            <a href="https://facebook.com/PAGENAME" target="_blank">Facebook</a>
+                        </p>
+                    </div>
+                    <div class="Address-details">
+                        <h3>Address</h3>
+                        <p>YOUR ADDRESS</p>
+                    </div>
+                </div>
+            </footer>
+            
+    </section>
+</body>
+</html>
