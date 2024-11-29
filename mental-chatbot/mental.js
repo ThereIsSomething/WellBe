@@ -47,8 +47,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 chatMessages.appendChild(aiMessage);
 
                 chatMessages.scrollTop = chatMessages.scrollHeight;
-            }, 1000);
+            }, 100);
 
+            
             messageInput.value = '';
         }
     }
