@@ -4,8 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f00d85b7-c488-41a3-805c-c95d2dcf5d92" name="Changes" comment="login page, dashboard, my journal, and dashboard settings html added">
+    <list default="true" id="f00d85b7-c488-41a3-805c-c95d2dcf5d92" name="Changes" comment="API JS added">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DashBoard.html" beforeDir="false" afterPath="$PROJECT_DIR$/DashBoard.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MyJournal.html" beforeDir="false" afterPath="$PROJECT_DIR$/MyJournal.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,10 +21,10 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
-        <option value="JavaScript File" />
         <option value="JSX File" />
         <option value="package.json" />
         <option value="HTML File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -125,7 +130,7 @@
       <workItem from="1732827104207" duration="1209000" />
       <workItem from="1732883593929" duration="15024000" />
       <workItem from="1732919803889" duration="939000" />
-      <workItem from="1732948473071" duration="15395000" />
+      <workItem from="1732948473071" duration="23171000" />
     </task>
     <task id="LOCAL-00001" summary="HTML and CSS added">
       <option name="closed" value="true" />
@@ -303,7 +308,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732994520978</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="API JS added">
+      <option name="closed" value="true" />
+      <created>1732997111966</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1732997111966</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -332,6 +345,7 @@
     <MESSAGE value="Sign Up changed to Join WellBe" />
     <MESSAGE value="style and login page updated" />
     <MESSAGE value="login page, dashboard, my journal, and dashboard settings html added" />
-    <option name="LAST_COMMIT_MESSAGE" value="login page, dashboard, my journal, and dashboard settings html added" />
+    <MESSAGE value="API JS added" />
+    <option name="LAST_COMMIT_MESSAGE" value="API JS added" />
   </component>
 </project>

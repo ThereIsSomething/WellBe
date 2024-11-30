@@ -153,56 +153,63 @@
 <!-- JavaScript Section -->
 <script>
     // Save Journal Entry Functionality
-    document.getElementById("saveEntry").addEventListener("click", function () {
+    document.getElementById("saveEntry").addEventListener("click", async function () {
         const entryText = document.getElementById("journalEntry").value.trim();
-
         if (entryText === "") {
             alert("Please write something before saving!");
             return;
         }
 
-        const apiKey = "AIzaSyCVZlvVV4yDTwFZMLzfkHzmFoY1PeTFRwg"; // Replace this with your Gemini API key
-        const endpoint = "https://generativelanguage.googleapis.com/v1beta2/models/gemini-1.5-flash-latest:generateContent?key=" + apiKey;
+        // Save the entry to the list
+        const entryList = document.getElementById("entryList");
+        const newEntry = document.createElement("li");
+        newEntry.textContent = entryText;
 
-        const payload = {
-            contents: [{ parts: [{ text: entryText }] }]
-        };
+        // Create a feedback section
+        const feedbackDiv = document.createElement("div");
+        feedbackDiv.textContent = "Analyzing your entry...";
+        feedbackDiv.className = "mt-2 text-gray-500 text-sm";
+        newEntry.appendChild(feedbackDiv);
+        entryList.appendChild(newEntry);
 
-        fetch(endpoint, {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify(payload)
-        })
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error(`API error: ${response.status}`);
-                }
-                return response.json();
-            })
-            .then(data => {
-                console.log("API Response:", data);
-                const insights = data?.contents?.[0]?.parts?.[0]?.text || "No insights provided.";
+        // Clear the textarea
+        document.getElementById("journalEntry").value = "";
 
-                // Save the entry and show insights
-                const entryList = document.getElementById("entryList");
-                const newEntry = document.createElement("li");
-                newEntry.innerHTML = `
-                <strong>Your Entry:</strong> ${entryText} <br>
-                <strong>Insights:</strong> ${insights}
-            `;
-                entryList.appendChild(newEntry);
-
-                document.getElementById("journalEntry").value = ""; // Clear the textarea
-                alert("Your entry has been saved with insights!");
-            })
-            .catch(error => {
-                console.error("Error calling the Gemini API:", error);
-                alert("Failed to analyze your entry. Please try again later.");
-            });
+        // Call the Gemini API for analysis
+        const feedback = await analyzeEntryWithGemini(entryText);
+        feedbackDiv.textContent = feedback || "Couldn't analyze your entry. Please try again later.";
     });
 
+    async function analyzeEntryWithGemini(entryText) {
+        const apiKey = "AIzaSyCVZlvVV4yDTwFZMLzfkHzmFoY1PeTFRwg"; // Replace with your actual key
+        const apiUrl = "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key=AIzaSyCVZlvVV4yDTwFZMLzfkHzmFoY1PeTFRwg"; // Confirm the endpoint
+
+        try {
+            const response = await fetch(apiUrl, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    "Authorization": `Bearer ${apiKey}`, // Adjust if needed
+                },
+                body: JSON.stringify({
+                    text: entryText, // Adjust field name based on API docs
+                    options: { sentiment: true, summary: true }, // Adjust if required
+                }),
+            });
+
+            const data = await response.json();
+            console.log("API Response:", data);
+
+            if (!response.ok) {
+                throw new Error(`API error: ${data.message || response.statusText}`);
+            }
+
+            return data.feedback || "Analysis complete, but no specific feedback was provided.";
+        } catch (error) {
+            console.error("Error analyzing entry with Gemini:", error);
+            return `Failed to analyze the entry. Error: ${error.message}`;
+        }
+    }
 
 
     // Scroll Inspiration Section

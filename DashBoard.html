@@ -12,6 +12,12 @@
       background: linear-gradient(to bottom right, #4A1D87, #1D0038);
       color: #ffffff;
     }
+    @font-face{
+      font-family: 'Garamond';
+      font-style: normal;
+      font-weight: normal;
+      src: local('Garamond'), url('garamond_[allfont.ru].woff') format('woff');
+    }
     .container {
       max-width: 1200px;
       margin: auto;
@@ -88,7 +94,7 @@
 <div class="container">
   <!-- Header -->
   <header class="flex justify-between items-center mb-8">
-    <div class="text-3xl font-bold" style="font-family: 'JetBrains Mono Light', sans-serif">Well<span style="color:red">.</span>Be</div>
+    <div class="text-3xl font-bold" id="logo" style="font-family: 'Garamond', sans-serif; font-weight: bolder">Well<span style="color:red">.</span>Be</div>
     <nav class="flex space-x-8">
       <a href="#" class="nav-link">Dashboard</a>
       <a href="#" class="nav-link">My Journal</a>
