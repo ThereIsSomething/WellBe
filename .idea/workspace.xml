@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="f00d85b7-c488-41a3-805c-c95d2dcf5d92" name="Changes" comment="login page, dashboard, my journal, and dashboard settings html added">
+      <change beforePath="$PROJECT_DIR$/MyJournal.html" beforeDir="false" afterPath="$PROJECT_DIR$/MyJournal.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+        <option value="JavaScript File" />
+        <option value="JSX File" />
+        <option value="package.json" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="PUSH_AUTO_UPDATE" value="true" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;ThereIsSomething&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/ThereIsSomething/WellBe.git&quot;,
+    &quot;accountId&quot;: &quot;3e93cb42-17f4-4a1a-896e-15e683bd3fd9&quot;
+  }
+}</component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
+  <component name="ProjectId" id="2pJHhsWFuZp4u9ztXKOv9bqnztp" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "javascript.nodejs.core.library.configured.version": "22.11.0",
+    "javascript.nodejs.core.library.typings.version": "22.10.0",
+    "last_opened_file_path": "C:/Users/nitis/OneDrive/Documents/GitHub/WellBe/login",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_interpreter_path": "C:/Users/nitis/AppData/Roaming/JetBrains/WebStorm2024.3/node/versions/22.11.0/node",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "azure",
+      "mongo"
+    ]
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\nitis\OneDrive\Documents\GitHub\WellBe\login" />
+      <recent name="C:\Users\nitis\OneDrive\Documents\GitHub\WellBe" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\nitis\OneDrive\Documents\GitHub\WellBe" />
+      <recent name="C:\Users\nitis\OneDrive\Documents\GitHub\WellBe\login" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-e768b9ed790e-JavaScript-WS-243.21565.180" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f00d85b7-c488-41a3-805c-c95d2dcf5d92" name="Changes" comment="" />
+      <created>1732477198850</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1732477198850</updated>
+      <workItem from="1732477383011" duration="79000" />
+      <workItem from="1732477483629" duration="249000" />
+      <workItem from="1732477750261" duration="69000" />
+      <workItem from="1732477827894" duration="285000" />
+      <workItem from="1732508972636" duration="199000" />
+      <workItem from="1732510282746" duration="411000" />
+      <workItem from="1732555103641" duration="1116000" />
+      <workItem from="1732556235659" duration="5526000" />
+      <workItem from="1732609417825" duration="3300000" />
+      <workItem from="1732618376790" duration="14796000" />
+      <workItem from="1732634744645" duration="12764000" />
+      <workItem from="1732654810411" duration="78000" />
+      <workItem from="1732654966902" duration="466000" />
+      <workItem from="1732686069974" duration="219000" />
+      <workItem from="1732688151868" duration="1819000" />
+      <workItem from="1732712314735" duration="13190000" />
+      <workItem from="1732734672983" duration="36000" />
+      <workItem from="1732734791347" duration="2324000" />
+      <workItem from="1732798674780" duration="2563000" />
+      <workItem from="1732801270011" duration="14233000" />
+      <workItem from="1732827104207" duration="1209000" />
+      <workItem from="1732883593929" duration="15024000" />
+      <workItem from="1732919803889" duration="939000" />
+      <workItem from="1732948473071" duration="15395000" />
+    </task>
+    <task id="LOCAL-00001" summary="HTML and CSS added">
+      <option name="closed" value="true" />
+      <created>1732555922337</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1732555922337</updated>
+    </task>
+    <task id="LOCAL-00002" summary="HTML and CSS added">
+      <option name="closed" value="true" />
+      <created>1732556368517</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1732556368517</updated>
+    </task>
+    <task id="LOCAL-00003" summary="HTML and CSS added">
+      <option name="closed" value="true" />
+      <created>1732556437339</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1732556437339</updated>
+    </task>
+    <task id="LOCAL-00004" summary="HTML and CSS added">
+      <option name="closed" value="true" />
+      <created>1732567481367</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1732567481367</updated>
+    </task>
+    <task id="LOCAL-00005" summary="wellbe feedback html added">
+      <option name="closed" value="true" />
+      <created>1732618065803</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1732618065803</updated>
+    </task>
+    <task id="LOCAL-00006" summary="wellbe feedback html added">
+      <option name="closed" value="true" />
+      <created>1732618518158</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1732618518158</updated>
+    </task>
+    <task id="LOCAL-00007" summary="HTML &amp; CSS Updated">
+      <option name="closed" value="true" />
+      <created>1732623041772</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1732623041772</updated>
+    </task>
+    <task id="LOCAL-00008" summary="HTML &amp; CSS Updated">
+      <option name="closed" value="true" />
+      <created>1732648102610</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1732648102610</updated>
+    </task>
+    <task id="LOCAL-00009" summary="HTML &amp; CSS Updated">
+      <option name="closed" value="true" />
+      <created>1732651196176</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1732651196176</updated>
+    </task>
+    <task id="LOCAL-00010" summary="HTML &amp; CSS Updated">
+      <option name="closed" value="true" />
+      <created>1732652844961</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1732652844961</updated>
+    </task>
+    <task id="LOCAL-00011" summary="HTML &amp; CSS Updated">
+      <option name="closed" value="true" />
+      <created>1732654592616</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1732654592616</updated>
+    </task>
+    <task id="LOCAL-00012" summary="CSS(navbar updated)Updated">
+      <option name="closed" value="true" />
+      <created>1732654879946</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1732654879946</updated>
+    </task>
+    <task id="LOCAL-00013" summary="HTML Head title updated">
+      <option name="closed" value="true" />
+      <created>1732655135726</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1732655135726</updated>
+    </task>
+    <task id="LOCAL-00014" summary="nav bar and logo changed">
+      <option name="closed" value="true" />
+      <created>1732715310570</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1732715310570</updated>
+    </task>
+    <task id="LOCAL-00015" summary="theming updated">
+      <option name="closed" value="true" />
+      <created>1732717471377</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1732717471377</updated>
+    </task>
+    <task id="LOCAL-00016" summary="login page implemented">
+      <option name="closed" value="true" />
+      <created>1732717747069</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1732717747069</updated>
+    </task>
+    <task id="LOCAL-00017" summary="login page implemented">
+      <option name="closed" value="true" />
+      <created>1732723989723</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1732723989723</updated>
+    </task>
+    <task id="LOCAL-00018" summary="login page implemented">
+      <option name="closed" value="true" />
+      <created>1732727456435</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1732727456435</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Sign Up changed to Join WellBe">
+      <option name="closed" value="true" />
+      <created>1732728605254</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1732728605254</updated>
+    </task>
+    <task id="LOCAL-00020" summary="style and login page updated">
+      <option name="closed" value="true" />
+      <created>1732827203336</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1732827203336</updated>
+    </task>
+    <task id="LOCAL-00021" summary="style and login page updated">
+      <option name="closed" value="true" />
+      <created>1732827693771</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1732827693771</updated>
+    </task>
+    <task id="LOCAL-00022" summary="login page, dashboard, my journal, and dashboard settings html added">
+      <option name="closed" value="true" />
+      <created>1732994520978</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1732994520978</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="HTML and CSS added" />
+    <MESSAGE value="wellbe feedback html added" />
+    <MESSAGE value="HTML &amp; CSS Updated" />
+    <MESSAGE value="CSS(navbar updated)Updated" />
+    <MESSAGE value="HTML Head title updated" />
+    <MESSAGE value="nav bar and logo changed" />
+    <MESSAGE value="theming updated" />
+    <MESSAGE value="login page implemented" />
+    <MESSAGE value="Sign Up changed to Join WellBe" />
+    <MESSAGE value="style and login page updated" />
+    <MESSAGE value="login page, dashboard, my journal, and dashboard settings html added" />
+    <option name="LAST_COMMIT_MESSAGE" value="login page, dashboard, my journal, and dashboard settings html added" />
+  </component>
+</project>

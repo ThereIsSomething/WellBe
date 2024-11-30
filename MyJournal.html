@@ -155,17 +155,55 @@
     // Save Journal Entry Functionality
     document.getElementById("saveEntry").addEventListener("click", function () {
         const entryText = document.getElementById("journalEntry").value.trim();
+
         if (entryText === "") {
             alert("Please write something before saving!");
             return;
         }
-        const entryList = document.getElementById("entryList");
-        const newEntry = document.createElement("li");
-        newEntry.textContent = entryText;
-        entryList.appendChild(newEntry);
-        document.getElementById("journalEntry").value = ""; // Clear textarea
-        alert("Your entry has been saved!");
+
+        const apiKey = "AIzaSyCVZlvVV4yDTwFZMLzfkHzmFoY1PeTFRwg"; // Replace this with your Gemini API key
+        const endpoint = "https://generativelanguage.googleapis.com/v1beta2/models/gemini-1.5-flash-latest:generateContent?key=" + apiKey;
+
+        const payload = {
+            contents: [{ parts: [{ text: entryText }] }]
+        };
+
+        fetch(endpoint, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(payload)
+        })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`API error: ${response.status}`);
+                }
+                return response.json();
+            })
+            .then(data => {
+                console.log("API Response:", data);
+                const insights = data?.contents?.[0]?.parts?.[0]?.text || "No insights provided.";
+
+                // Save the entry and show insights
+                const entryList = document.getElementById("entryList");
+                const newEntry = document.createElement("li");
+                newEntry.innerHTML = `
+                <strong>Your Entry:</strong> ${entryText} <br>
+                <strong>Insights:</strong> ${insights}
+            `;
+                entryList.appendChild(newEntry);
+
+                document.getElementById("journalEntry").value = ""; // Clear the textarea
+                alert("Your entry has been saved with insights!");
+            })
+            .catch(error => {
+                console.error("Error calling the Gemini API:", error);
+                alert("Failed to analyze your entry. Please try again later.");
+            });
     });
+
+
 
     // Scroll Inspiration Section
     function scrollInspiration(direction) {
