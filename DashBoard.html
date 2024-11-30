@@ -45,8 +45,45 @@
     .stat-card small {
       color: rgba(255, 255, 255, 0.7);
     }
+    .card-graph {
+      margin: 0;
+      padding: 1rem; /* Reduced padding to maximize canvas space */
+      background-color: #1D0038;
+      backdrop-filter: blur(1px);
+      border-radius: 0.75rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      max-height: 320px;
+    }
+
+    .card-graph canvas {
+      width: 100% !important; /* Ensure the canvas spans the full width */
+      height: 90% !important; /* Ensure the canvas spans the full height */
+      aspect-ratio: auto; /* Ensure dynamic resizing based on parent */
+    }
+
+    /*.stat-card-graph{ {*/
+    /*  text-align: center;*/
+    /*  border: 1px solid #eaeaea;*/
+    /*  border-radius: 0.5rem;*/
+    /*  padding: 1rem;*/
+    /*  background-color: #000000;*/
+    /*}*/
+    .card-graph h3 {
+      margin: 0.3rem;
+      font-size: 1rem;
+    }
   </style>
 </head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JES74WTYXK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-JES74WTYXK');
+</script>
 <body>
 <div class="container">
   <!-- Header -->
@@ -57,7 +94,7 @@
       <a href="#" class="nav-link">My Journal</a>
       <a href="#" class="nav-link">Therapy</a>
       <a href="#" class="nav-link">Reports</a>
-      <a href="#" class="nav-link">Settings</a>
+      <a href="DashboardSettings.html" class="nav-link">Settings</a>
     </nav>
     <div class="flex items-center space-x-4">
       <div id="realTimeClock" style="font-size: 1.5rem; font-weight: bold; color: #ffffff;"></div>
@@ -74,9 +111,9 @@
       <h2 class="text-2xl font-bold">Overall Statistics</h2>
       <div class="grid grid-cols-3 gap-8 mt-6">
         <div class="stat-card">
-          <small>Upcoming therapy sessions</small>
+          <small>Gratitude Journal Entries</small>
           <h3>6</h3>
-          <small class="text-green-500">+20% this month</small>
+          <small class="text-green-500">50% this week</small>
         </div>
         <div class="stat-card">
           <small>Mood score</small>
@@ -86,7 +123,45 @@
         <div class="stat-card">
           <small>Mindfulness Minutes</small>
           <h3>120</h3>
-          <small class="text-red-500">-29% this month</small>
+          <small class="text-red-500">-29% this week</small>
+        </div>
+        <div class="stat-card">
+          <small>Meditation Streak</small>
+          <h3>4</h3>
+          <small class="text-red-500">-42% this week</small>
+        </div>
+        <div class="stat-card">
+          <small>Positive Habits Gained</small>
+          <h3>4</h3>
+          <small class="text-red-500">+50% this week</small>
+        </div>
+        <div class="stat-card">
+          <small>Upcoming Sessions</small>
+          <h3>1</h3>
+          <small class="text-red-500">+1 this month</small>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="mb-10">
+      <h2 class="text-2xl font-bold mb-6">Insights</h2>
+      <div class="grid grid-cols-2 gap-6">
+        <div class="card-graph">
+          <h3 class="text-lg font-bold">Emotion Trends</h3>
+          <canvas id="emotionChart"></canvas>
+        </div>
+        <div class="card-graph">
+          <h3 class="text-lg font-bold">Stress Levels Over Time</h3>
+          <canvas id="stressChart"></canvas>
+        </div>
+        <div class="card-graph">
+          <h3 class="text-lg font-bold">Anxiety Levels</h3>
+          <canvas id="anxietyChart"></canvas>
+        </div>
+        <div class="card-graph">
+          <h3 class="text-lg font-bold">Sleep Patterns</h3>
+          <canvas id="sleepChart"></canvas>
         </div>
       </div>
     </div>
@@ -115,17 +190,21 @@
     </div>
 
     <div class="grid grid-cols-2 gap-8">
+      <!-- Meditation Player -->
       <div class="flex items-center justify-between bg-gray-800 rounded-lg p-6">
         <div>
           <h3 class="text-lg font-bold">Inner Harmony Hues</h3>
           <p class="text-sm text-gray-400">Take a mental voyage to inner sanctuaries</p>
+          <audio id="meditationAudio" src="riverstream.mp3" preload="auto" class="mt-4 w-full"></audio>
         </div>
         <div class="flex space-x-2">
-          <button class="bg-gray-700 p-2 rounded-full"><i class="fas fa-backward"></i></button>
-          <button class="bg-gray-700 p-2 rounded-full"><i class="fas fa-play"></i></button>
-          <button class="bg-gray-700 p-2 rounded-full"><i class="fas fa-forward"></i></button>
+          <button class="bg-gray-700 p-2 rounded-full" onclick="playAudio()"><i class="fas fa-play"></i></button>
+          <button class="bg-gray-700 p-2 rounded-full" onclick="pauseAudio()"><i class="fas fa-pause"></i></button>
+          <button class="bg-gray-700 p-2 rounded-full" onclick="stopAudio()"><i class="fas fa-stop"></i></button>
         </div>
       </div>
+
+      <!-- Download Report Section -->
       <div class="flex items-center justify-between bg-gray-800 rounded-lg p-6">
         <div>
           <h3 class="text-lg font-bold">Download your mental wellness report</h3>
@@ -147,6 +226,155 @@
   }
   setInterval(updateTime, 1000);
   updateTime();
+</script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+  //Gradient helper function
+  function createGradient(ctx, colorStart, colorEnd) {
+    const gradient = ctx.createLinearGradient(0, 0, 0, 350);
+    gradient.addColorStop(0, colorStart);
+    gradient.addColorStop(1, colorEnd);
+    return gradient;
+  }
+
+  // Emotion Trends (Line Chart)
+  const emotionCtx = document.getElementById('emotionChart').getContext('2d');
+  const emotionGradient = createGradient(emotionCtx, 'rgba(74, 144, 226, 1)', 'rgba(74, 144, 226, 0)');
+  new Chart(emotionCtx, {
+    type: 'line',
+    data: {
+      labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+      datasets: [{
+        label: 'Emotion Score',
+        data: [3, 4, 2, 5, 4, 2.5, 5],
+        borderColor: '#4A90E2',
+        borderWidth: 3,
+        backgroundColor: emotionGradient,
+        fill: true,
+        tension: 0.4,
+        pointBackgroundColor: '#4A90E2',
+        pointRadius: 5,
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: { display: false },
+        tooltip: { backgroundColor: '#4A90E2', titleColor: '#fff', bodyColor: '#fff' }
+      },
+      scales: {
+        x: { grid: { display: false } },
+        y: { grid: { drawBorder: false }, ticks: { stepSize: 1 } }
+      }
+    }
+  });
+
+  // Stress Levels (Bar Chart)
+  const stressCtx = document.getElementById('stressChart').getContext('2d');
+  const stressGradient = createGradient(stressCtx, 'rgb(0,74,900)', 'rgba(255, 112, 67, 0)');
+  new Chart(stressCtx, {
+    type: 'bar',
+    data: {
+      labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+      datasets: [{
+        label: 'Stress Level',
+        data: [5, 4, 6, 5, 3, 8, 3],
+        backgroundColor: stressGradient,
+        borderRadius: 10,
+        barThickness: 20,
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: { display: false },
+        tooltip: { backgroundColor: '#FF7043', titleColor: '#fff', bodyColor: '#fff' }
+      },
+      scales: {
+        x: { grid: { display: false } },
+        y: { grid: { drawBorder: false }, ticks: { stepSize: 1 } }
+      }
+    }
+  });
+
+  // Anxiety Levels (Bar Chart)
+  const anxietyCtx = document.getElementById('anxietyChart').getContext('2d');
+  const anxietyGradient = createGradient(stressCtx, 'rgb(215,4,4)', 'rgba(255, 112, 67, 0)');
+  new Chart(anxietyCtx, {
+    type: 'bar',
+    data: {
+      labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+      datasets: [{
+        label: 'Anxiety Level',
+        data: [3, 6, 4, 2, 3, 8, 4],
+        backgroundColor: anxietyGradient,
+        borderRadius: 10,
+        barThickness: 20,
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: { display: false },
+        tooltip: { backgroundColor: '#FF7043', titleColor: '#fff', bodyColor: '#fff' }
+      },
+      scales: {
+        x: { grid: { display: false } },
+        y: { grid: { drawBorder: false }, ticks: { stepSize: 1 } }
+      }
+    }
+  });
+
+  // Sleep Patterns (Line Chart)
+  const sleepCtx = document.getElementById('sleepChart').getContext('2d');
+  const sleepGradient = createGradient(sleepCtx, 'rgba(76, 175, 80, 1)', 'rgba(76, 175, 80, 0)');
+  new Chart(sleepCtx, {
+    type: 'line',
+    data: {
+      labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+      datasets: [{
+        label: 'Hours Slept',
+        data: [6, 5, 7, 8, 6, 4, 7],
+        borderColor: '#4CAF50',
+        borderWidth: 3,
+        backgroundColor: sleepGradient,
+        fill: true,
+        tension: 0.4,
+        pointBackgroundColor: '#4CAF50',
+        pointRadius: 5,
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: { display: false },
+        tooltip: { backgroundColor: '#4CAF50', titleColor: '#fff', bodyColor: '#fff' }
+      },
+      scales: {
+        x: { grid: { display: false } },
+        y: { grid: { drawBorder: false }, ticks: { stepSize: 1 } }
+      }
+    }
+  });
+  const audio = document.getElementById('meditationAudio');
+
+  function playAudio() {
+    audio.play();
+  }
+
+  function pauseAudio() {
+    audio.pause();
+  }
+
+  function stopAudio() {
+    audio.pause();
+    audio.currentTime = 0; // Reset the audio to the start
+  }
 </script>
 </body>
 </html>
