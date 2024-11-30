@@ -1,4 +1,7 @@
+*{
+    background: #481988;
 
+}
 @keyframes float {
     0% { transform: translateY(0px); }
     50% { transform: translateY(-20px); }
@@ -14,11 +17,31 @@
 .service-card {
     transition: all 0.3s ease;
     perspective: 1000px;
+    background:  #1D0038;
+
 }
 
 .service-card:hover {
     transform: rotateY(10deg);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    box-shadow: 0 10px 20px rgba(16,185,129);
+}
+ #nitish{
+    box-shadow: 0 5px 10px rgba(59, 130, 246)
+}
+ #naman{
+     box-shadow: 0 5px 10px rgba(16,185,129);
+ }
+ #jatin{
+     box-shadow: 0 5px 10px rgba(239, 68, 68);
+ }
+#nitish:hover{
+    box-shadow: 0 10px 20px rgba(59, 130, 246)
+}
+#naman:hover{
+    box-shadow: 0 10px 20px rgba(16,185,129);
+}
+#jatin:hover{
+    box-shadow: 0 10px 20px rgba(239, 68, 68);
 }
 
 .floating-icon {
@@ -30,7 +53,8 @@
 }
 
 .gradient-bg {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: #481988;
+
 }
 
 
