@@ -340,16 +340,6 @@
             content.classList.toggle('open');
         });
     });
-    window.addEventListener('scroll', () => {
-        const navbar = document.getElementById('nav-div');
-        const pageHeight = window.innerHeight;
-        if (window.scrollY > pageHeight) {
-            navbar.classList.add('scrolled'); // Add class when scrolled
-        }
-        else {
-            navbar.classList.remove('scrolled'); // Remove class when at top
-        }
-    });
 </script>
 </body>
 </html>
