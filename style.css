@@ -158,7 +158,11 @@ html{
 .blue video{
     max-width: 100%;
     width:2000px;
+    box-shadow: 0 20px 40px #1044b8;
 
+}
+.background-image{
+    box-shadow: 0 5px 10px darkblue;
 }
 .background-content{
     position: absolute;
@@ -202,7 +206,7 @@ html{
 }
 .about{
     padding: 6rem 7%;
-    background: var(--third);
+    background:black;
 }
 .main-about{
     display: flex;
@@ -226,10 +230,12 @@ html{
 .about-content h1{
     font-size: 40px;
     margin-bottom: 15px;
+    color:#e9ecef;
 }
 .about-content p{
     font-size: 1.5rem;
     margin-bottom: 30px;
+    color: #e9ecef;
 }
 .about-content a{
     background: linear-gradient(90deg, #6a11cb, #ff0000);
@@ -247,6 +253,9 @@ html{
 }
 .our-services{
     padding: 4rem 7%;
+    background-color: black;
+    max-width: 100%;
+    width: 3000px;
 }
 .service-content{
     display: flex;
@@ -255,6 +264,109 @@ html{
     flex-wrap: wrap;
     gap: 50px;
 }
+/*changes*/
+.template video{
+    max-width: 100%;
+    width: 2000px;
+    box-shadow: 0 50px 100px #7427c1;
+}
+.template1 video{
+    max-width: 100%;
+    width: 1510px;
+    margin-top: 30px;
+    box-shadow: 0 50px 100px #7427c1;
+
+}
+.heading {
+    display: flex;
+    justify-content: space-between;
+    flex: 1 1 300px;
+    gap: 50px;
+    padding: 1rem 0rem;
+    text-align: center;
+}
+
+h1{
+    display: block;
+    font-size: 2em;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    unicode-bidi: isolate;
+    font-size: 50px;
+
+}
+.live{
+    display: flex;
+    justify-content: space-between;
+    flex: 1 1 300px;
+    gap: 50px;
+    padding: 1rem 0rem;
+    text-align: center;
+}
+.heading .my .righ-btn {
+    padding: 1rem 0rem;
+    font-size: 2rem;
+    color: white;
+    background: var(--secclr);
+    margin-top: 30px;
+    box-shadow: 0 50px 100px #7427c1
+
+}
+.heading .my .righ-btn a {
+
+    font-size: 2rem;
+    color: white;
+    background: var(--secclr);
+
+
+}
+.mentor img{
+    margin-top: 25px;
+    max-width: 100%;
+    width: 639px;
+    box-shadow: 0 50px 100px #7427c1
+
+}
+.live .mentortext img{
+    max-width: 100%;
+    width: 100px;
+
+}
+.live .mentortext .rig-btn a{
+    font-size: 2rem;
+    color: white;
+    background: var(--secclr);
+    padding: 2px 2px 2px 2px;
+    box-shadow: 0 50px 100px #7427c1
+}
+.personal-video video{
+    max-width: 100%;
+    width: 2000px;
+    box-shadow: 0 50px 100px #7427c1
+}
+.guidance .guidancevid video{
+    display: flex;
+    justify-content: space-between;
+    flex: 1 1 300px;
+    gap: 50px;
+    padding: 1rem 0rem;
+    text-align: center;
+    max-width: 100%;
+    width: 700px;
+    margin-left: auto;
+    box-shadow: 0 50px 100px #7427c1;
+}
+.guidance .guidancevid .guidancetext #h1 {
+ display: flex;
+ justify-content:flex-start;
+    flex-direction: row;
+
+}
+
+/*changes end*/
 .left-service-content{
     flex: 1 1 45rem;
 }
@@ -267,6 +379,7 @@ html{
 .left-service-content h1{
     font-size: 40px;
     margin-bottom: 15px;
+    color: navajowhite;
 }
 .left-service-content p{
     font-size: 1.5rem;
