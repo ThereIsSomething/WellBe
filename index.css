@@ -365,6 +365,11 @@ h1{
     flex-direction: row;
 
 }
+.multiverse .multiverse-video video{
+    max-width: 100%;
+    width: 2000px;
+    box-shadow: 0 50px 100px #7427c1
+}
 
 /*changes end*/
 .left-service-content{
@@ -484,7 +489,10 @@ h1{
 }
 .footer{
     padding: 6rem 7%;
-    background: var(--third);
+    background: linear-gradient(135deg, #613c3c, #361f43, #511836,#7427c1);
+    border-radius: 15px;
+    box-shadow: 0 10px 20px #7427c1
+    
 }
 .main-footer{
     display: flex;
@@ -498,12 +506,12 @@ h1{
 }
 .inner-footer h2{
     font-size: 2rem;
-    color: black;
+    color: white;
 }
 .inner-footer a{
     font-size: 1.5rem;
     font-weight: bolder;
-    color: black;
+    color: peachpuff;
     display: block;
     margin-top: 1rem;
     padding-top: 1rem;
