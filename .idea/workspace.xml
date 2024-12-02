@@ -4,13 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f00d85b7-c488-41a3-805c-c95d2dcf5d92" name="Changes" comment="API JS added">
+    <list default="true" id="f00d85b7-c488-41a3-805c-c95d2dcf5d92" name="Changes" comment="font and node added">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DashBoard.html" beforeDir="false" afterPath="$PROJECT_DIR$/DashBoard.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MyJournal.html" beforeDir="false" afterPath="$PROJECT_DIR$/MyJournal.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,33 +55,34 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "javascript.nodejs.core.library.configured.version": "22.11.0",
-    "javascript.nodejs.core.library.typings.version": "22.10.0",
-    "last_opened_file_path": "C:/Users/nitis/OneDrive/Documents/GitHub/WellBe/login",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_interpreter_path": "C:/Users/nitis/AppData/Roaming/JetBrains/WebStorm2024.3/node/versions/22.11.0/node",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;22.11.0&quot;,
+    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;22.10.0&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/nitis/OneDrive/Documents/GitHub/WellBe/login&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_interpreter_path&quot;: &quot;C:/Users/nitis/AppData/Roaming/JetBrains/WebStorm2024.3/node/versions/22.11.0/node&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "azure",
-      "mongo"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;azure&quot;,
+      &quot;mongo&quot;,
+      &quot;mysql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\nitis\OneDrive\Documents\GitHub\WellBe\login" />
@@ -130,7 +131,15 @@
       <workItem from="1732827104207" duration="1209000" />
       <workItem from="1732883593929" duration="15024000" />
       <workItem from="1732919803889" duration="939000" />
-      <workItem from="1732948473071" duration="23171000" />
+      <workItem from="1732948473071" duration="23314000" />
+      <workItem from="1733046056696" duration="2116000" />
+      <workItem from="1733066090005" duration="848000" />
+      <workItem from="1733073286474" duration="4363000" />
+      <workItem from="1733145954827" duration="147000" />
+      <workItem from="1733157091129" duration="3948000" />
+      <workItem from="1733165530422" duration="5622000" />
+      <workItem from="1733172760710" duration="2822000" />
+      <workItem from="1733176305620" duration="946000" />
     </task>
     <task id="LOCAL-00001" summary="HTML and CSS added">
       <option name="closed" value="true" />
@@ -316,7 +325,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732997111966</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="font and node added">
+      <option name="closed" value="true" />
+      <created>1733007411407</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1733007411407</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -346,6 +363,7 @@
     <MESSAGE value="style and login page updated" />
     <MESSAGE value="login page, dashboard, my journal, and dashboard settings html added" />
     <MESSAGE value="API JS added" />
-    <option name="LAST_COMMIT_MESSAGE" value="API JS added" />
+    <MESSAGE value="font and node added" />
+    <option name="LAST_COMMIT_MESSAGE" value="font and node added" />
   </component>
 </project>
