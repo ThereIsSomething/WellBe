@@ -4,13 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f00d85b7-c488-41a3-805c-c95d2dcf5d92" name="Changes" comment="font and node added">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DashBoard.html" beforeDir="false" afterPath="$PROJECT_DIR$/DashBoard.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyJournal.html" beforeDir="false" afterPath="$PROJECT_DIR$/MyJournal.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+    <list default="true" id="f00d85b7-c488-41a3-805c-c95d2dcf5d92" name="Changes" comment="index optimized">
+      <change beforePath="$PROJECT_DIR$/wellbe feedback.html" beforeDir="false" afterPath="$PROJECT_DIR$/wellbe feedback.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -139,7 +134,7 @@
       <workItem from="1733157091129" duration="3948000" />
       <workItem from="1733165530422" duration="5622000" />
       <workItem from="1733172760710" duration="2822000" />
-      <workItem from="1733176305620" duration="946000" />
+      <workItem from="1733176305620" duration="1261000" />
     </task>
     <task id="LOCAL-00001" summary="HTML and CSS added">
       <option name="closed" value="true" />
@@ -333,7 +328,15 @@
       <option name="project" value="LOCAL" />
       <updated>1733007411407</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="index optimized">
+      <option name="closed" value="true" />
+      <created>1733177559417</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1733177559417</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -364,6 +367,7 @@
     <MESSAGE value="login page, dashboard, my journal, and dashboard settings html added" />
     <MESSAGE value="API JS added" />
     <MESSAGE value="font and node added" />
-    <option name="LAST_COMMIT_MESSAGE" value="font and node added" />
+    <MESSAGE value="index optimized" />
+    <option name="LAST_COMMIT_MESSAGE" value="index optimized" />
   </component>
 </project>
