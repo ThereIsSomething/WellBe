@@ -14,7 +14,7 @@ function toggleForms() {
     }
 }
 
-// Login Form Submission
+
 document.getElementById("login").addEventListener("submit", async (e) => {
     e.preventDefault();
     const email = document.getElementById("loginEmail").value;
@@ -30,7 +30,6 @@ document.getElementById("login").addEventListener("submit", async (e) => {
     alert(result.message);
 });
 
-// Signup Form Submission
 document.getElementById("signup").addEventListener("submit", async (e) => {
     e.preventDefault();
     const name = document.getElementById("signupName").value;
