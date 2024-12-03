@@ -6,7 +6,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $email = $_POST['email'];
     $password = password_hash($_POST['password'], PASSWORD_DEFAULT); // Hash the password
 
-    $sql = "INSERT INTO users (FullName, email, password) VALUES ('$FullName ', '$email', '$password')";
+    $sql = "INSERT INTO users (FullName, email, password) VALUES ('$FullName', '$email', '$password')";
 
     if ($conn->query($sql) === TRUE) {
         echo "Signup successful!";
