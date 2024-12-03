@@ -3,7 +3,78 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="Contact.css">
+  <style>
+    body {
+    font-family: 'Arial', sans-serif;
+    background: url("https://i.imgur.com/VHCZCmk.jpeg");
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+.contact-container {
+    background: rgb(0, 0, 0);
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    padding: 40px;
+    width: 400px;
+    box-shadow: 0 15px 25px rgba(241, 133, 238, 0.66);
+    animation: float 4s ease-in-out infinite;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background: rgb(40 39 39);
+    border-radius: 5px;
+    color: rgb(255, 255, 255);
+    transition: all 0.3s ease;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+.submit-btn {
+    background: linear-gradient(45deg, rgba(255, 0, 242, 0.21), #7a05dc);
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.submit-btn:hover {
+    transform: scale(1.05);
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+}
+
+@keyframes shimmer {
+    0% { background-position: -1000px 0; }
+    100% { background-position: 1000px 0; }
+}
+  </style>
   <title>Contact Us</title>
 </head>
 <body>
