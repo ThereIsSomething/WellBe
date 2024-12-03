@@ -34,8 +34,8 @@
                 <h2 class="form-title">Welcome Back</h2>
                 <p class="form-subtitle">Log in to continue your journey.</p>
                 <form id="login" method="POST" action="login.php">
-                    <input type="email" name="email" placeholder="Email" required>
-                    <input type="password" name="password" placeholder="Password" required>
+                    <input type="email" id="loginEmail" name="email" placeholder="Email" required>
+                    <input type="password" id="loginPassword" name="password" placeholder="Password" required>
                     <button type="submit">Login</button>
                     <p>Don't have an account? <a href="#" onclick="toggleForms()">Sign up</a></p>
                     <p><a href="#">Forgotten your password?</a></p>
@@ -47,9 +47,9 @@
                 <h2 class="form-title">Join WellBe</h2>
                 <p class="form-subtitle">Sign up and start exploring.</p>
                 <form id="signup" method="POST" action="signup.php">
-                    <input type="text" name="FullName" placeholder="Full Name" required>
-                    <input type="email" name="email" placeholder="Email" required>
-                    <input type="password" name="password" placeholder="Password" required>
+                    <input type="text" id="signupName" name="FullName" placeholder="Full Name" required>
+                    <input type="email" id="signupEmail" name="email" placeholder="Email" required>
+                    <input type="password" id="signupPassword" name="password" placeholder="Password" required>
                     <button type="submit">Sign Up</button>
                     <p>Already have an account?
                         <a href="#" onclick="toggleForms()">Login</a>
