@@ -8,15 +8,15 @@ const cors = require('cors');
 const app = express();
 const PORT = 3000;
 
-// Middleware
+
 app.use(cors());
 app.use(bodyParser.json());
 
-// Database Connection
+
 const db = mysql.createConnection({
     host: '193.203.184.189',
-    user: 'u448196158_wellbe', // Replace with your MySQL username
-    password: '@Wellbe.Mindsage2024', // Replace with your MySQL password
+    user: 'u448196158_wellbe', 
+    password: '@Wellbe.Mindsage2024',
     database: 'u448196158_wellbe'
 });
 
@@ -28,17 +28,17 @@ db.connect((err) => {
     }
 });
 
-// Routes
+
 app.get('/', (req, res) => {
     res.send('Welcome to the WellBe Backend!');
 });
 
-// Start the server
+
 app.listen(PORT, 0.0.0.0,() => {
     console.log(`Server running on http://wellbe.support:${PORT}`);
 });
 
-// User Signup
+
 app.post('/signup', async (req, res) => {
     const { ussername, email, password } = req.body;
 
@@ -65,7 +65,7 @@ app.post('/signup', async (req, res) => {
     }
 });
 
-// User Login
+
 app.post('/login', (req, res) => {
     const { email, password } = req.body;
 
