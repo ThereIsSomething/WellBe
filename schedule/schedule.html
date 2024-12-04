@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Schedule Your Therapy</title>
+  <link rel="stylesheet" href="schedule.css">
+<body>
+<div class="container">
+  <h1>Schedule Your Therapy</h1>
+  <p class="quote">"Healing begins with a single step towards understanding yourself."</p>
+
+  <form id="therapyForm">
+    <div class="form-group">
+      <label for="username">Username</label>
+      <input type="text" id="username" placeholder="Enter your username" required>
+    </div>
+
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input type="email" id="email" placeholder="Enter your email" required>
+    </div>
+
+    <div class="form-group">
+      <label for="therapistSelect">Select Therapist</label>
+      <input type="text" id="therapistSelect" placeholder="Click to view therapists" readonly>
+      <div id="therapistList">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="timeSlotSelect">Select Time Slot</label>
+      <input type="text" id="timeSlotSelect" placeholder="Select therapist first" readonly>
+      <div id="timeSlotList">
+      </div>
+    </div>
+
+    <button type="submit" class="btn">Schedule Therapy</button>
+    <button type="button" id="immediateTherapyBtn" class="btn" style="margin-top: 10px;">Immediate Therapy</button>
+  </form>
+</div>
+
+<div id="loadingScreen">
+  <div class="spinner"></div>
+  <h2>Finding the Right Therapist for You...</h2>
+</div>
+
+<script src="schedule.js"></script>
+
+</body>
+</html>
