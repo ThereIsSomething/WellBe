@@ -40,7 +40,7 @@ app.listen(PORT, 0.0.0.0,() => {
 
 
 app.post('/signup', async (req, res) => {
-    const { ussername, email, password } = req.body;
+    const { username, email, password } = req.body;
 
     if (!username || !email || !password) {
         return res.status(400).json({ message: 'All fields are required.' });
@@ -90,9 +90,7 @@ app.post('/login', (req, res) => {
             return res.status(401).json({ message: 'Incorrect password.' });
         }
 
-        const token = jwt.sign({ id: user.id, username: user.username }, 'your_secret_key', {
-            expiresIn: '1h'
-        });
+        
 
           res.json({
             message: 'Login successful!',
@@ -107,7 +105,7 @@ async function handleSignup(event) {
     const email = document.getElementById('email').value;
     const password = document.getElementById('password').value;
 
-    const response = await fetch('http://wellbe.support:3000/signup', {
+    const response = await fetch('http://localhost:3000/signup', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -155,5 +153,12 @@ function toggleForms() {
         loginForm.classList.add("active");
         signupForm.classList.remove("active");
     }
+}
+try {
+    const response = await fetch('http://wellbe.support:3000/login', { ... });
+    const data = await response.json();
+} catch (error) {
+    console.error('Error:', error);
+    alert('An error occurred. Please try again later.');
 }
 
