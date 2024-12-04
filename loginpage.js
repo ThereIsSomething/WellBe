@@ -34,8 +34,8 @@ app.get('/', (req, res) => {
 });
 
 // Start the server
-app.listen(PORT, () => {
-    console.log(`Server running on http://localhost:${PORT}`);
+app.listen(PORT, 0.0.0.0,() => {
+    console.log(`Server running on http://wellbe.support:${PORT}`);
 });
 
 // User Signup
@@ -94,7 +94,11 @@ app.post('/login', (req, res) => {
             expiresIn: '1h'
         });
 
-        res.json({ message: 'Login successful!', token });
+          res.json({
+            message: 'Login successful!',
+            username: user.username,
+            redirectUrl: '/DashBoard.html'
+        });
     });
 });
 async function handleSignup(event) {
@@ -103,7 +107,7 @@ async function handleSignup(event) {
     const email = document.getElementById('email').value;
     const password = document.getElementById('password').value;
 
-    const response = await fetch('http://localhost:3000/signup', {
+    const response = await fetch('http://wellbe.support:3000/signup', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -120,7 +124,7 @@ async function handleLogin(event) {
     const email = document.getElementById('email').value;
     const password = document.getElementById('password').value;
 
-    const response = await fetch('http://localhost:3000/login', {
+    const response = await fetch('http://wellbe.support:3000/login', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -132,6 +136,7 @@ async function handleLogin(event) {
     if (response.ok) {
         alert('Login successful!');
         localStorage.setItem('token', data.token);
+        window.location.href = data.redirectUrl;
     } else {
         alert(data.message);
     }
