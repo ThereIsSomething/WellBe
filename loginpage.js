@@ -121,8 +121,8 @@ async function handleSignup(event) {
 
 async function handleLogin(event) {
     event.preventDefault();
-    const email = document.getElementById('email').value;
-    const password = document.getElementById('password').value;
+    const email = document.getElementById('Email').value;
+    const password = document.getElementById('Password').value;
 
     const response = await fetch('http://wellbe.support:3000/login', {
         method: 'POST',
