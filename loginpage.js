@@ -135,7 +135,7 @@ async function handleLogin(event) {
     const data = await response.json();
     if (response.ok) {
         alert('Login successful!');
-        localStorage.setItem('token', data.token);
+        sessionStorage.setItem('username', data.username);
         window.location.href = data.redirectUrl;
     } else {
         alert(data.message);
