@@ -147,6 +147,14 @@
             border-radius: 12px;
             box-shadow: 0 6px 15px rgba(255, 0, 102, 0.3);
         }
+        .image3 img {
+            margin-left: 60px;
+            width: 100%;
+            max-height: 224.8px;
+            max-width: 400px;
+            border-radius: 12px;
+            box-shadow: 0 6px 15px cyan;
+        }
 
         .faq-section {
             padding: 3rem;
@@ -239,13 +247,14 @@
 
         <!-- New Sections -->
         <div class="section alt">
-            <div class="content">
+             <div class="image3">
+                <img src="https://source.unsplash.com/400x400/?mindfulness,vision" alt="Our Vision">
+            </div>
+                <div class="content">
                 <h2>Our Vision</h2>
                 <p>To create a world where mental health is prioritized and accessible to everyone, fostering a balanced and fulfilling life.</p>
             </div>
-            <div class="image">
-                <img src="https://source.unsplash.com/400x400/?mindfulness,vision" alt="Our Vision">
-            </div>
+           
         </div>
 
         <div class="section">
