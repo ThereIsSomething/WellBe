@@ -63,9 +63,8 @@ if (isset($_SESSION["user"])) {
                 <form id="login" action="login.php" method="post">
                     <input type="email" id="Email" name="email" placeholder="Email" required autocomplete="on">
                     <input type="password" id="Password" name="password" placeholder="Password" required autocomplete="on">
-                    <div class="form-btn">
-            <input type="submit" value="Login" name="login" class="btn btn-primary">
-        </div>
+                  <button type="submit" value="Login" name="login" class="btn btn-primary">Login</button>
+
                     <p>Don't have an account? <a href="#" onclick="toggleForms()">Sign up</a></p>
                     <p><a href="#">Forgotten your password?</a></p>
                 </form>
@@ -128,9 +127,7 @@ if (isset($_SESSION["user"])) {
                     <input type="text" id="username" name="full name" placeholder="Full Name" required autocomplete="on">
                     <input type="email" id="email" name="email" placeholder="Email" required autocomplete="on">
                     <input type="password" id="password" name="password" placeholder="Password" required autocomplete="on">
-                     <div class="form-btn">
-                <input type="submit" class="btn btn-primary" value="Register" name="submit">
-            </div>
+                   <button type="submit" class="btn btn-primary" value="Register" name="submit">Sign Up</button>
                     <p>Already have an account?
                         <a href="#" onclick="toggleForms()">Login</a>
                     </p>
