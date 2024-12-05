@@ -42,29 +42,29 @@ html{
     z-index: 1000;
 }
 .font-logo {
-    font-family: 'JetBrains Mono Light', sans-serif; 
-    font-size: 24px; 
+    font-family: 'JetBrains Mono Light', sans-serif; /* Replace with your font name */
+    font-size: 24px; /* Adjust size as needed */
     font-weight: bold;
     color: white;
     line-height: 1.2;
     text-align: center;
     animation: rotatingGlow 1.5s infinite ease-in-out;
     text-shadow:
-            0 0 5px rgba(255, 255, 255, 0.8),
-            0 0 10px rgba(255, 255, 255, 0.6), 
-            0 0 20px rgba(255, 255, 255, 0.4), 
-            0 0 30px rgba(255, 255, 255, 0.2);
+            0 0 5px rgba(255, 255, 255, 0.8), /* Subtle inner glow */
+            0 0 10px rgba(255, 255, 255, 0.6), /* Medium outer glow */
+            0 0 20px rgba(255, 255, 255, 0.4), /* Larger spread glow */
+            0 0 30px rgba(255, 255, 255, 0.2); /* Extended glow */
 }
 
 .font-logo .dot {
-    display: inline-block;      
-    width: 5px;             
-    height: 5px;                
-    background-color: red;     
-    border-radius: 50%;          
-    vertical-align: auto;     
-    margin-left: 3px;          
-    margin-right: 3px;           
+    display: inline-block;       /* Makes the dot an inline block */
+    width: 5px;                 /* Width of the dot */
+    height: 5px;                /* Height of the dot */
+    background-color: red;       /* Color of the dot */
+    border-radius: 50%;          /* Makes it round */
+    vertical-align: auto;      /* Aligns the dot with the text */
+    margin-left: 3px;            /* Add a little space from 'Well' */
+    margin-right: 3px;           /* Add a little space before 'Be' */
 }
 
 @keyframes rotatingGlow {
@@ -91,15 +91,15 @@ html{
 
 .font-logo small {
     display: block;
-    font-size: 12px; 
+    font-size: 12px; /* Adjust for smaller text */
     color: white;
     font-weight: normal;
     animation: rotatingGlow 1.5s infinite ease-in-out;
     text-shadow:
-            0 0 5px rgba(255, 255, 255, 0.8),
-            0 0 10px rgba(255, 255, 255, 0.6), 
-            0 0 20px rgba(255, 255, 255, 0.4),
-            0 0 30px rgba(255, 255, 255, 0.2); 
+            0 0 5px rgba(255, 255, 255, 0.8), /* Subtle inner glow */
+            0 0 10px rgba(255, 255, 255, 0.6), /* Medium outer glow */
+            0 0 20px rgba(255, 255, 255, 0.4), /* Larger spread glow */
+            0 0 30px rgba(255, 255, 255, 0.2); /* Extended glow */
 }
 #nav-div{
     display: flex;
@@ -117,12 +117,12 @@ html{
     position: relative;
 }
 #nav-div.scrolled {
-    backdrop-filter: blur(80px); 
-    box-shadow: 0 9px 18px purple; 
+    backdrop-filter: blur(80px); /* Solid white background on scroll */
+    box-shadow: 0 9px 18px purple; /* Subtle shadow */
 }
 
 #nav-div.scrolled .navbar a {
-    color: #333;
+    color: #333; /* Darker color for text after scrolling */
 }
 .navbar a:after{
     content: '';
@@ -384,7 +384,7 @@ h1{
     box-shadow: 0 50px 100px #7427c1
 }
 
-
+/*changes end*/
 .left-service-content{
     flex: 1 1 45rem;
 }
@@ -534,22 +534,24 @@ h1{
 }
 
 
-
+/* width */
 ::-webkit-scrollbar {
     width: 2.5px;
 }
 
-
+/* Track */
 ::-webkit-scrollbar-track {
     box-shadow: inset 0 0 5px var(--mainclr);
     background: var(--mainclr);
 }
 
+/* Handle */
 ::-webkit-scrollbar-thumb {
     background:linear-gradient(90deg,#6a11cb, #ff0000) ;
     border-radius: 4px;
 }
 
+/* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
     background: var(--third);
 }
@@ -615,42 +617,6 @@ h1{
 
     }
 }
-         @media (max-width: 480px) {
-      html {
-        font-size: 50%; 
-      }
-
-      .header {
-        padding: 1.5rem; 
-      }
-
-      .icons div {
-        display: block; 
-      }
-
-      .navbar {
-        height: 100vh; 
-        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-      }
-
-      .navbar a {
-        font-size: 2.5rem; 
-        padding: 0.8rem;
-      }
-
-      .background-content {
-        padding-left: 2rem; 
-      }
-
-      .inner-about .inner-about-image img {
-        width: 90%; 
-        margin-top: 15px;
-      }
-
-      .right-service-content {
-        justify-content: center; 
-      }
-    }
 .modal {
     position: fixed;
     top: 50%;
@@ -688,29 +654,31 @@ h1{
     color: #e91e63;
 }
 
+/* Blur Effect */
 .blurred {
     filter: blur(5px);
     pointer-events: none;
 }
+/* Custom Scrollbar */
 .modal::-webkit-scrollbar {
-    width: 8px;
+    width: 8px; /* Adjust scrollbar width */
 }
 
 .modal::-webkit-scrollbar-thumb {
-    background: #e91e63; 
-    border-radius: 10px; 
+    background: #e91e63; /* Thumb color */
+    border-radius: 10px; /* Rounded edges */
 }
 
 .modal::-webkit-scrollbar-thumb:hover {
-    background: #ff6090; 
+    background: #ff6090; /* Hover color */
 }
 
 .modal::-webkit-scrollbar-track {
-    background: #444; 
+    background: #444; /* Track color */
     border-radius: 10px;
 }
 
-
+/* Reuse styles from the About Section */
 .about-section {
     display: flex;
     flex-direction: column;
@@ -758,6 +726,25 @@ h1{
     box-shadow: 0 6px 15px rgba(255, 0, 102, 0.3);
 }
 
+.image3 img {
+    margin-left: 60px;
+    width: 100%;
+    max-height: 224.8px;
+    max-width: 500px;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px cyan;
+}
+        
+.image4 img {
+    margin-left: 55px;
+    width: 100%;
+    max-height: 224.8px;
+    max-width: 400px;
+    max-width: 300px;
+    border-radius: 12px;
+    box-shadow: 0 8px 15px cyan;
+}
+    
 .faq-section {
     padding: 3rem;
     background-color: black;
@@ -817,6 +804,7 @@ h1{
 }
     </style>
 </head>
+<!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-JES74WTYXK"></script>
 <script>
     window.dataLayer = window.dataLayer || [];
@@ -825,6 +813,18 @@ h1{
 
     gtag('config', 'G-JES74WTYXK');
 </script>
+
+
+<!--html starts here               -->
+<!--html starts here               -->
+<!--html starts here               -->
+<!--html starts here               -->
+<!--html starts here               -->
+<!--html starts here               -->
+<!--html starts here              -->
+<!--html starts here              -->
+<!--html starts here              -->
+<!--html starts here               -->
 
 <body>
 <header class="header" id="home1">
@@ -843,14 +843,14 @@ h1{
 
     <div class="icons">
         <div id="menubar" class="fas fa-bars"></div>
-        <a href="loginpage.html">Log In</a>
+        <a href="registration.php">Log In</a>
     </div>
 </header>
-
+<!-- Modal -->
 <div id="aboutModal" class="modal">
     <button class="close-btn" id="closeBtn">&times;</button>
     <div class="about-section">
-       
+        <!-- Section 1 -->
         <div class="section alt">
             <div class="content">
                 <h2>Who We Are</h2>
@@ -861,7 +861,7 @@ h1{
             </div>
         </div>
 
-      
+        <!-- Section 2 -->
         <div class="section">
             <div class="image2">
                 <img src="https://i.imgur.com/o46MvOS.jpeg" alt="What Problem Are We Solving">
@@ -872,19 +872,20 @@ h1{
             </div>
         </div>
 
+        <!-- New Sections -->
         <div class="section alt">
             <div class="content">
                 <h2>Our Vision</h2>
                 <p style="color:white">To create a world where mental health is prioritized and accessible to everyone, fostering a balanced and fulfilling life.</p>
             </div>
-            <div class="image">
+            <div class="image3">
                 <img src="https://i.imgur.com/nzCsw7s.png" alt="Our Vision">
             </div>
         </div>
 
         <div class="section">
-            <div class="image">
-                <img src="https://source.unsplash.com/400x400/?values,integrity" alt="Our Values">
+            <div class="image4">
+                <img src="https://st4.depositphotos.com/18673546/21635/v/450/depositphotos_216356104-stock-illustration-value-icon-black-filled-vector.jpg" alt="Our Values">
             </div>
             <div class="content">
                 <h2>Our Values</h2>
@@ -892,6 +893,7 @@ h1{
             </div>
         </div>
 
+        <!-- FAQ Section -->
         <div class="faq-section">
             <h2>Frequently Asked Questions</h2>
             <div class="faq">
@@ -936,7 +938,7 @@ h1{
     <div class="background-content">
         <h1 style="color:white">provide an exceptional <br> Relaxing experience</h1>
         <p style="color:white">At WellBe, we harness the power of artificial intelligence to provide <br>accessible, personalized, and effective mental health support </br></p>
-        <button style="color: white" id="account" onclick="location.href='loginpage.html';">
+        <button style="color: white" id="account" onclick="location.href='registration.php';">
             Join WellBe <span class="arrow">→</span>
         </button>
     </div>
@@ -971,11 +973,11 @@ h1{
 
         <div class="right-service-content">
             <div class="right-btn">
-                <a href="portfolio.html">See all services</a>
+                <a href="#">See all services</a>
             </div>
         </div>
     </div>
-   
+   <!--1-->
     <div class="template">
         <video autoplay muted id="Vid">
             <source src="Purple%20Blue%20Gradient%20Modern%20Metaverse%20Futuristic%20Presentation%20(1).mp4"
@@ -983,7 +985,7 @@ h1{
         </video>
 
     </div>
-  
+    <!--2-->
     <div class="heading">
         <div class="template1">
             <video autoplay muted id="Vide">
@@ -995,11 +997,11 @@ h1{
             <h1 style="color: peachpuff">AI COMAPNION</h1>
             <p style="color: white;font-size: large;font-family:'monospace'">Your AI companion simplifies your day by summarizing its highlights and offering personalized stress-relief tips, like self-care activities and mood boosters, to keep you balanced and supported.</p>
             <div class="righ-btn">
-                <a href="portfolio.html">EXPLORE AI COMPANION →</a>
+                <a href="#">EXPLORE AI COMPANION →</a>
             </div>
         </div>
     </div>
-
+    <!--3-->
     <div class="live">
         <div class="mentor">
             <img src="Hiring%20Plan%20Presentation%20in%20Sky%20Blue%20Green%20White%20Bold%20Corporate%20Style.jpg" alt="live mentoring">
@@ -1008,11 +1010,11 @@ h1{
             <h1 style="color: peachpuff">LIVE MENTORSHIP</h1>
             <img src="abstract-digital-handset-technology-blue-260nw-2290092851-removebg-preview.png" alt="call">
             <div class="rig-btn">
-                <a href="loginpage.html">CONNECT NOW →</a>
+                <a href="#">CONNECT NOW →</a>
             </div>
         </div>
     </div>
-    
+    <!--4-->
     <div class="personal">
         <div class="personal-video">
             <video autoplay muted  id="Video">
@@ -1020,7 +1022,7 @@ h1{
             </video>
         </div>
     </div>
-
+    <!--5-->
     <div class="guidance">
         <div class="guidancevid">
             <video autoplay muted id="Vi">
@@ -1029,7 +1031,7 @@ h1{
         </div>
 
     </div>
-
+ <!--6-->
     <div class="multiverse">
         <div class="multiverse-video">
             <video autoplay muted id="V">
@@ -1093,9 +1095,12 @@ h1{
         </div>
 
         <div class="inner-footer">
-            <h2>heading</h2>
+            <h2>QUICK LINKS</h2>
             <a href="loginpage.html">Login</a>
             <a href="loginpage.html">Signup</a>
+            <a href="#">lorem</a>
+            <a href="#">lorem</a>
+            <a href="#">lorem</a>
         </div>
 
         <div class="inner-footer">
@@ -1118,7 +1123,7 @@ h1{
     </div>
 </div>
 </div>
-
+<!--<script src="script.js"></script>-->
 <script>
     const aboutBtn = document.getElementById('aboutBtn');
     const aboutModal = document.getElementById('aboutModal');
@@ -1138,7 +1143,7 @@ h1{
         homeContent2.classList.remove('blurred');
     });
 
-    
+    // Toggle FAQ functionality
     document.querySelectorAll('.faq h3').forEach(faqHeader => {
         faqHeader.addEventListener('click', () => {
             const content = faqHeader.nextElementSibling;

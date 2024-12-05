@@ -21,14 +21,14 @@
             background-color: #fff;
         }
         .chat-header {
-            background: linear-gradient(135deg, #6a11cb, #2575fc); 
+            background: linear-gradient(135deg, #6a11cb, #2575fc); /* Purple to Blue Gradient */
             color: #fff;
             padding: 15px;
             text-align: center;
             font-size: 18px;
             font-weight: bold;
             position: relative;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle Shadow */
         }
         .chat-header span {
             font-size: 14px;
@@ -64,7 +64,7 @@
             transition: background-color 0.3s, border 0.3s;
         }
         .rating-option label.highlighted {
-            background-color: #007BFF; 
+            background-color: #007BFF; /* Highlight color */
             color: white;
             border-radius: 10px;
             padding: 5px 10px;
@@ -160,13 +160,13 @@
     const navigationButtons = document.getElementById('navigationButtons');
 
     const loadQuestion = () => {
-        messageBox.style.display = 'none'; 
-        feedbackReason.value = ''; 
+        messageBox.style.display = 'none'; // Hide message box initially
+        feedbackReason.value = ''; // Reset message box text
 
-    
+        // Update question
         questionContainer.innerHTML = `<div class="question">${questions[currentQuestion]}</div>`;
 
-       
+        // Update rating options
         ratingOptions.innerHTML = '';
         emojis.forEach((emoji, index) => {
             const option = document.createElement('div');
@@ -181,11 +181,11 @@
             option.querySelector('input').addEventListener('change', () => {
                 feedback[currentQuestion] = index + 1;
 
-               
+                // Highlight the selected option
                 document.querySelectorAll('.rating-option label').forEach((label) => label.classList.remove('highlighted'));
                 option.querySelector('label').classList.add('highlighted');
 
-                
+                // Show message box if Neutral, Not Satisfied, or Disappointed is selected
                 if (index <= 2) {
                     messageBox.style.display = 'block';
                 } else {
@@ -195,7 +195,7 @@
             ratingOptions.appendChild(option);
         });
 
-       
+        // Update navigation buttons
         prevButton.disabled = currentQuestion === 0;
         nextButton.textContent = currentQuestion === questions.length - 1 ? 'Submit' : 'Next';
     };
@@ -212,7 +212,7 @@
             currentQuestion++;
             loadQuestion();
         } else {
-            
+            // Display thank you screen with animation
             navigationButtons.style.display = 'none';
             questionContainer.innerHTML = `<div class="thank-you">Thank you for your feedback, guys!</div>`;
             ratingOptions.innerHTML = '';
@@ -225,13 +225,13 @@
         if (reason) {
             feedback[`reason-${currentQuestion}`] = reason;
             messageBox.style.display = 'none';
-            nextQuestion(); 
+            nextQuestion(); // Automatically move to the next question
         } else {
             alert("Please provide your reason before submitting.");
         }
     };
 
-   
+    // Initialize the first question
     loadQuestion();
 </script>
 </body>

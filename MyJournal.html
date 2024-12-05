@@ -27,23 +27,23 @@
     </style>
 </head>
 <body class="p-10 h-screen font sans" style="background-color: #fcd9ba;">
-
+<!-- Main Container -->
 <div class="p-10 h-screen" style="background-color: #fcd9ba;">
-    
+    <!-- Write About Your Day Section -->
     <section class="mb-10">
         <h2 class="text-lg font-semibold mb-4">Write About Your Day</h2>
         <div class="bg-gradient-to-r from-purple-100 to-purple-200 p-6 rounded-lg shadow-lg transform transition duration-500 hover:scale-105">
             <textarea id="journalEntry" class="w-full h-32 p-4 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500" placeholder="Write about your day..." aria-label="Write about your day"></textarea>
             <button id="saveEntry" class="mt-4 bg-purple-600 text-white py-2 px-4 rounded-full shadow-lg hover:bg-purple-700 transition duration-300">Save Entry</button>
         </div>
-       
+        <!-- Journal Entries Section -->
         <div id="entries" class="mt-6">
             <h3 class="text-lg font-semibold mb-4">Your Entries</h3>
             <ul id="entryList" class="list-disc pl-6 text-gray-600"></ul>
         </div>
     </section>
 
- 
+    <!-- Inspiration Section -->
     <section class="mb-10">
         <div class="flex justify-between items-center mb-6">
             <h1 class="text-2xl font-bold">Today</h1>
@@ -63,7 +63,7 @@
                     <p class="text-center text-gray-600 italic">"The only limit to our realization of tomorrow is our doubts of today."</p>
                     <p class="text-center text-gray-400 mt-4">Franklin D. Roosevelt</p>
                 </article>
-              
+                <!-- Add more quotes as needed -->
                 <article class="bg-gradient-to-r from-purple-100 to-purple-200 p-6 rounded-lg shadow-lg transform transition duration-500 hover:scale-105 min-w-[300px]" aria-label="Quote by Franklin D. Roosevelt">
                     <p class="text-center text-gray-600 italic">"Do not wait to strike till the iron is hot; but make it hot by striking."</p>
                     <p class="text-center text-gray-400 mt-4">William Butler Yeats</p>
@@ -144,15 +144,15 @@
         </div>
     </div>
 
-  
+    <!-- Footer -->
     <footer class="text-center text-gray-600 mt-6">
         <p>© 2024 WellBe App. All rights reserved.</p>
     </footer>
 </div>
 
-
+<!-- JavaScript Section -->
 <script>
-   
+    // Save Journal Entry Functionality
     document.getElementById("saveEntry").addEventListener("click", async function () {
         const entryText = document.getElementById("journalEntry").value.trim();
         if (entryText === "") {
@@ -160,28 +160,28 @@
             return;
         }
 
-     
+        // Save the entry to the list
         const entryList = document.getElementById("entryList");
         const newEntry = document.createElement("li");
         newEntry.textContent = entryText;
 
-       
+        // Create a feedback section
         const feedbackDiv = document.createElement("div");
         feedbackDiv.textContent = "Analyzing your entry...";
         feedbackDiv.className = "mt-2 text-gray-500 text-sm";
         newEntry.appendChild(feedbackDiv);
         entryList.appendChild(newEntry);
 
-        
+        // Clear the textarea
         document.getElementById("journalEntry").value = "";
 
-        
+        // Call the Gemini API for analysis
         const feedback = await analyzeEntryWithGemini(entryText);
         feedbackDiv.textContent = feedback || "Couldn't analyze your entry. Please try again later.";
     });
 
     async function analyzeEntryWithGemini(entryText) {
-        const apiKey = "AIzaSyCVZlvVV4yDTwFZMLzfkHzmFoY1PeTFRwg"; 
+        const apiKey = "AIzaSyCVZlvVV4yDTwFZMLzfkHzmFoY1PeTFRwg"; // Replace with your actual key
         const apiUrl = "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key=AIzaSyCVZlvVV4yDTwFZMLzfkHzmFoY1PeTFRwg"; // Confirm the endpoint
 
         try {
@@ -189,11 +189,11 @@
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
-                    "Authorization": `Bearer ${apiKey}`, 
+                    "Authorization": `Bearer ${apiKey}`, // Adjust if needed
                 },
                 body: JSON.stringify({
-                    text: entryText, 
-                    options: { sentiment: true, summary: true }, 
+                    text: entryText, // Adjust field name based on API docs
+                    options: { sentiment: true, summary: true }, // Adjust if required
                 }),
             });
 
@@ -215,7 +215,7 @@
     // Scroll Inspiration Section
     function scrollInspiration(direction) {
         const wrapper = document.getElementById("inspirationWrapper");
-        const scrollAmount = 300; 
+        const scrollAmount = 300; // Adjust based on content size
         if (direction === "left") {
             wrapper.scrollBy({ left: -scrollAmount, behavior: "smooth" });
         } else if (direction === "right") {
