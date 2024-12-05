@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     document.querySelector('.edit-btn').addEventListener('click', () => {
         editName.value = viewName.textContent;
-        editDOB.value = '1990-05-15';
+        editDOB.value = '2006-11-25';
         editGmail.value = viewGmail.textContent;
         editPhone.value = viewPhone.textContent;
         editProfession.value = viewProfession.textContent;
