@@ -155,6 +155,13 @@
             border-radius: 12px;
             box-shadow: 0 6px 15px cyan;
         }
+        .image4 img {
+      width: 100%;
+      maxhieght: 400px;
+      max-width: 300px;
+      border-radius: 12px;
+      box-shadow: 0 8px 15px cyan;
+    }
 
         .faq-section {
             padding: 3rem;
@@ -258,8 +265,8 @@
         </div>
 
         <div class="section">
-            <div class="image">
-                <img src="https://source.unsplash.com/400x400/?values,integrity" alt="Our Values">
+            <div class="image4">
+                <img src="https://st4.depositphotos.com/18673546/21635/v/450/depositphotos_216356104-stock-illustration-value-icon-black-filled-vector.jpg" alt="Our Values">
             </div>
             <div class="content">
                 <h2>Our Values</h2>
