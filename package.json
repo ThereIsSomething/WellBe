@@ -1,6 +1,12 @@
 {
   "dependencies": {
     "@google/generative-ai": "^0.21.0",
-    "openai": "^4.73.1"
+    "dotenv": "^16.4.7",
+    "express": "^4.21.1",
+    "express-session": "^1.18.1",
+    "mysql2": "^3.11.5",
+    "openai": "^4.73.1",
+    "passport": "^0.7.0",
+    "passport-google-oauth20": "^2.0.0"
   }
 }

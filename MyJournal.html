@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Reflection App</title>
+    <title>WellBe: Journal</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
     <style>
@@ -181,35 +181,40 @@
     });
 
     async function analyzeEntryWithGemini(entryText) {
-        const apiKey = "AIzaSyCVZlvVV4yDTwFZMLzfkHzmFoY1PeTFRwg"; // Replace with your actual key
-        const apiUrl = "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key=AIzaSyCVZlvVV4yDTwFZMLzfkHzmFoY1PeTFRwg"; // Confirm the endpoint
 
+        const apiKey = "AIzaSyCTwXlidBg1i3T0Q2BlsTQYXFYVc-lqOEM";
+        const apiUrl = "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key=${apiKey}`,";
         try {
-            const response = await fetch(apiUrl, {
+            const response = await fetch(apiUrl,{
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
-                    "Authorization": `Bearer ${apiKey}`, // Adjust if needed
                 },
                 body: JSON.stringify({
-                    text: entryText, // Adjust field name based on API docs
-                    options: { sentiment: true, summary: true }, // Adjust if required
+                    prompt: { text: entryText },
+                    options: { sentiment: true, summary: true },
                 }),
             });
+
+            if (!response.ok) {
+                const errorData = await response.json();
+                throw new Error(errorData.message || "API request failed");
+            }
 
             const data = await response.json();
             console.log("API Response:", data);
 
-            if (!response.ok) {
-                throw new Error(`API error: ${data.message || response.statusText}`);
-            }
-
-            return data.feedback || "Analysis complete, but no specific feedback was provided.";
+            // // Adjust this based on the actual API response structure
+            // const sentiment = data.sentiment || "No sentiment detected";
+            // const summary = data.summary || "No summary provided";
+            //
+            // return `Sentiment: ${sentiment}\nSummary: ${summary}`;
         } catch (error) {
             console.error("Error analyzing entry with Gemini:", error);
             return `Failed to analyze the entry. Error: ${error.message}`;
         }
     }
+
 
 
     // Scroll Inspiration Section

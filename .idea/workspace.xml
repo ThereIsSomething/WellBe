@@ -4,8 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f00d85b7-c488-41a3-805c-c95d2dcf5d92" name="Changes" comment="index optimized">
-      <change beforePath="$PROJECT_DIR$/wellbe feedback.html" beforeDir="false" afterPath="$PROJECT_DIR$/wellbe feedback.html" afterDir="false" />
+    <list default="true" id="f00d85b7-c488-41a3-805c-c95d2dcf5d92" name="Changes" comment="wellbe feedback background color updated">
+      <change afterPath="$PROJECT_DIR$/login-page.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server.env" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyJournal.html" beforeDir="false" afterPath="$PROJECT_DIR$/MyJournal.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/login/loginpage.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/login/loginpage.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/login/loginpage.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/loginpage.css" beforeDir="false" afterPath="$PROJECT_DIR$/loginpage.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/loginpage.html" beforeDir="false" afterPath="$PROJECT_DIR$/loginpage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/loginpage.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/signup.php" beforeDir="false" afterPath="$PROJECT_DIR$/signup.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,8 +34,9 @@
         <option value="CSS File" />
         <option value="JSX File" />
         <option value="package.json" />
-        <option value="HTML File" />
+        <option value="TypeScript File" />
         <option value="JavaScript File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -33,12 +50,12 @@
     &quot;assignee&quot;: &quot;ThereIsSomething&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/ThereIsSomething/WellBe.git&quot;,
-    &quot;accountId&quot;: &quot;3e93cb42-17f4-4a1a-896e-15e683bd3fd9&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/ThereIsSomething/WellBe.git",
+    "accountId": "08f41f8c-b0e7-4e64-951b-c47a9d735579"
   }
-}</component>
+}]]></component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
@@ -50,34 +67,36 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;22.11.0&quot;,
-    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;22.10.0&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/nitis/OneDrive/Documents/GitHub/WellBe/login&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_interpreter_path&quot;: &quot;C:/Users/nitis/AppData/Roaming/JetBrains/WebStorm2024.3/node/versions/22.11.0/node&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "Node.js.server.js.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "javascript.nodejs.core.library.configured.version": "22.13.1",
+    "javascript.nodejs.core.library.typings.version": "22.13.4",
+    "last_opened_file_path": "C:/Users/nitis/OneDrive/Documents/GitHub/WellBe",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_interpreter_path": "C:/Users/nitis/AppData/Roaming/JetBrains/WebStorm2024.3/node/versions/22.13.1/node",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "settings.nodejs",
+    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\WebStorm 2024.3\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;azure&quot;,
-      &quot;mongo&quot;,
-      &quot;mysql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "azure",
+      "mongo",
+      "mysql"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\nitis\OneDrive\Documents\GitHub\WellBe\login" />
@@ -85,13 +104,14 @@
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\nitis\OneDrive\Documents\GitHub\WellBe" />
+      <recent name="C:\Users\nitis\OneDrive\Documents\GitHub\WellBe\gemini-1.5-flash" />
       <recent name="C:\Users\nitis\OneDrive\Documents\GitHub\WellBe\login" />
     </key>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-e768b9ed790e-JavaScript-WS-243.21565.180" />
+        <option value="bundled-js-predefined-d6986cc7102b-76f8388c3a79-JavaScript-WS-243.24978.60" />
       </set>
     </attachedChunks>
   </component>
@@ -134,7 +154,49 @@
       <workItem from="1733157091129" duration="3948000" />
       <workItem from="1733165530422" duration="5622000" />
       <workItem from="1733172760710" duration="2822000" />
-      <workItem from="1733176305620" duration="1261000" />
+      <workItem from="1733176305620" duration="1897000" />
+      <workItem from="1733178500729" duration="65000" />
+      <workItem from="1733220043766" duration="7370000" />
+      <workItem from="1733260580286" duration="1384000" />
+      <workItem from="1733304277279" duration="540000" />
+      <workItem from="1733332628878" duration="2548000" />
+      <workItem from="1733392679540" duration="6393000" />
+      <workItem from="1733406489723" duration="120000" />
+      <workItem from="1733409386090" duration="197000" />
+      <workItem from="1733428193936" duration="3923000" />
+      <workItem from="1733432174959" duration="993000" />
+      <workItem from="1733433433311" duration="18000" />
+      <workItem from="1733433458882" duration="1259000" />
+      <workItem from="1733435011881" duration="367000" />
+      <workItem from="1733436802025" duration="1511000" />
+      <workItem from="1733438420704" duration="8529000" />
+      <workItem from="1733491351156" duration="763000" />
+      <workItem from="1733805988940" duration="1179000" />
+      <workItem from="1733807185317" duration="1346000" />
+      <workItem from="1733977888414" duration="8945000" />
+      <workItem from="1734011935902" duration="70000" />
+      <workItem from="1734180903531" duration="45000" />
+      <workItem from="1734204936665" duration="966000" />
+      <workItem from="1734275820893" duration="103000" />
+      <workItem from="1734586347836" duration="162000" />
+      <workItem from="1734586526602" duration="259000" />
+      <workItem from="1734589785398" duration="1114000" />
+      <workItem from="1734621510607" duration="321000" />
+      <workItem from="1734623361038" duration="247000" />
+      <workItem from="1734623618756" duration="42000" />
+      <workItem from="1734635628928" duration="184000" />
+      <workItem from="1734635852712" duration="521000" />
+      <workItem from="1735139525063" duration="85000" />
+      <workItem from="1736663677414" duration="53000" />
+      <workItem from="1736702334831" duration="67000" />
+      <workItem from="1736708614084" duration="129000" />
+      <workItem from="1737010097547" duration="196000" />
+      <workItem from="1737111589286" duration="447000" />
+      <workItem from="1737218351644" duration="3186000" />
+      <workItem from="1737355068694" duration="90000" />
+      <workItem from="1737435056178" duration="1485000" />
+      <workItem from="1737436688848" duration="155000" />
+      <workItem from="1739861292792" duration="15000" />
     </task>
     <task id="LOCAL-00001" summary="HTML and CSS added">
       <option name="closed" value="true" />
@@ -336,7 +398,15 @@
       <option name="project" value="LOCAL" />
       <updated>1733177559417</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="wellbe feedback background color updated">
+      <option name="closed" value="true" />
+      <created>1733177838156</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1733177838156</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -368,6 +438,7 @@
     <MESSAGE value="API JS added" />
     <MESSAGE value="font and node added" />
     <MESSAGE value="index optimized" />
-    <option name="LAST_COMMIT_MESSAGE" value="index optimized" />
+    <MESSAGE value="wellbe feedback background color updated" />
+    <option name="LAST_COMMIT_MESSAGE" value="wellbe feedback background color updated" />
   </component>
 </project>

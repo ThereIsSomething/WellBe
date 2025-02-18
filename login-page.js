@@ -37,11 +37,16 @@ document.getElementById("signup").addEventListener("submit", async (e) => {
     const email = document.getElementById("signupEmail").value;
     const password = document.getElementById("signupPassword").value;
 
+    console.log(name, email, password);
+
     const response = await fetch("/api/signup", {
+
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ name, email, password }),
     });
+
+    console.log(response);
 
     const result = await response.json();
     alert(result.message);
