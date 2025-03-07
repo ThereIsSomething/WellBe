@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Companion</title>
+    <link rel="stylesheet" href="companion.css">
+</head>
+<body>
+<div class="main-container">
+    <div class="left-section">
+        <h3>Ongoing Conversations</h3>
+        <ul class="conversation-list">
+            <li class="active-conversation">
+                <img src="https://neural.love/cdn/thumbnails/1ed87d4f-6288-6ee8-b64b-4bc41450b12b/d8937212-61e2-519a-8b3e-27437a4ed0ca.webp?Expires=1767225599&Signature=xTeyPDzWAfJHS8b-IxJMYOw3U1GOV-7j6zttrRsb1g3GGQvv8sKTQcFwdeo7PIetqvdOHtqrQgmGWth4IPOeYF4JPsLb7Qhfl9jmtxeUO1dl15Ui2NqRe9MoxLyLpdW6lUJbX4vTc3LhbOIWEkqnA~yXjhh65-UuyYP5VtytPLFynqRebzikxJL15nJGkrgt-Jzt-phVRdvjeh~rHuJQr8BEmbJWOX5-GaB1n50Un2NhQ1VlkcZf4lgRQoXEEkrryV-2VuB7rgNUz55Lhswx4zy8YPkWzAB6pqhNaIBYiXfLBgfviPUr52oDk7viH4QxeJQiqbKWikqy8i0-8D3e-Q__&Key-Pair-Id=K2RFTOXRBNSROX" alt="Jennie" class="avatar">
+                Jennie
+            </li>
+            <li>
+                <img src="https://www.cohesiveglobal.com/images/services/support-0.jpg" alt="AI Support" class="avatar">
+                AI Support
+            </li>
+            <li>
+                <img src="https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F0874f902-67bd-43e3-b241-e92e34c0a68b_900x506.jpeg" alt="FriendBot" class="avatar">
+                FriendBot
+            </li>
+        </ul>
+        <a href="feedback.html" class="feedback-button">Leave Feedback</a>
+    </div>
+    <div class="chat-container">
+        <div class="chat-header">
+            <div class="avatar-container">
+                <img src="https://neural.love/cdn/thumbnails/1ed87d4f-6288-6ee8-b64b-4bc41450b12b/d8937212-61e2-519a-8b3e-27437a4ed0ca.webp?Expires=1767225599&Signature=xTeyPDzWAfJHS8b-IxJMYOw3U1GOV-7j6zttrRsb1g3GGQvv8sKTQcFwdeo7PIetqvdOHtqrQgmGWth4IPOeYF4JPsLb7Qhfl9jmtxeUO1dl15Ui2NqRe9MoxLyLpdW6lUJbX4vTc3LhbOIWEkqnA~yXjhh65-UuyYP5VtytPLFynqRebzikxJL15nJGkrgt-Jzt-phVRdvjeh~rHuJQr8BEmbJWOX5-GaB1n50Un2NhQ1VlkcZf4lgRQoXEEkrryV-2VuB7rgNUz55Lhswx4zy8YPkWzAB6pqhNaIBYiXfLBgfviPUr52oDk7viH4QxeJQiqbKWikqy8i0-8D3e-Q__&Key-Pair-Id=K2RFTOXRBNSROX" alt="Jennie" class="avatar" alt="Jennie" class="avatar">
+            </div>
+            <h2>Jennie</h2>
+        </div>
+        <div class="chat-body" id="chatBody">
+        </div>
+        <div class="chat-footer">
+            <input type="text" id="messageInput" placeholder="Type a message...">
+            <button id="sendMessage" disabled>Send</button>
+        </div>
+    </div>
+</div>
+<script src="companion.js"></script>
+</body>
+</html>
