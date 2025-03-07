@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomodoro Technique Guide</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 800px;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+            animation: fade-in 1.5s ease-out;
+        }
+
+        .typing-container {
+            position: relative;
+            height: 100px;
+            overflow: hidden;
+        }
+
+        #typing-text {
+            font-size: 2rem;
+            font-weight: 600;
+            color: #fff;
+            text-shadow: 0 0 10px rgba(255,255,255,0.5);
+        }
+
+        .content {
+            margin-top: 20px;
+            line-height: 1.6;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: slide-up 1s ease-out forwards 2s;
+        }
+
+        @keyframes fade-in {
+            from { opacity: 0; transform: scale(0.9); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        @keyframes slide-up {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes cursor-blink {
+            0% { opacity: 0; }
+            50% { opacity: 1; }
+            100% { opacity: 0; }
+        }
+
+        .cursor {
+            display: inline-block;
+            width: 3px;
+            height: 30px;
+            background-color: white;
+            animation: cursor-blink 0.7s infinite;
+            margin-left: 5px;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="typing-container">
+        <h1 id="typing-text"></h1>
+        <span class="cursor"></span>
+    </div>
+    <div class="content">
+        <h2>Understanding the Pomodoro Technique</h2>
+        <p>The Pomodoro Technique is a time management method that helps individuals enhance focus and productivity by breaking work into intervals, typically 25 minutes long, followed by a 5-minute break. .</p>
+
+        <h3>How It Works</h3>
+        <p>The technique involves:</p>
+        <ul>
+            <li>Working in 25-minute focused intervals (called "Pomodoros")</li>
+            <li>Taking a 5-minute break after each interval</li>
+            <li>Taking a longer 15-30 minute break after four Pomodoros</li>
+        </ul>
+
+        <h3>Benefits</h3>
+        <p>By using this technique, you can:</p>
+        <ul>
+            <li>Improve time management and concentration</li>
+            <li>Reduce mental fatigue</li>
+            <li>Create a sense of accomplishment</li>
+        </ul>
+    </div>
+</div>
+
+<script>
+    const text = "The Pomodoro Technique";
+    const typingText = document.getElementById('typing-text');
+    let index = 0;
+
+    function typeText() {
+        if (index < text.length) {
+            typingText.innerHTML += text.charAt(index);
+            index++;
+            setTimeout(typeText, 100);
+        }
+    }
+
+    window.onload = typeText;
+</script>
+</body>
+</html>

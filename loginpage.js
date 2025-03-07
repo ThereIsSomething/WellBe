@@ -14,4 +14,3 @@ function toggleForms() {
         signupForm.classList.remove("active");
     }
 }
-

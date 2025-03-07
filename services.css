@@ -25,15 +25,15 @@
     transform: rotateY(10deg);
     box-shadow: 0 10px 20px rgba(16,185,129);
 }
- #nitish{
+#nitish{
     box-shadow: 0 5px 10px rgba(59, 130, 246)
 }
- #naman{
-     box-shadow: 0 5px 10px rgba(16,185,129);
- }
- #jatin{
-     box-shadow: 0 5px 10px rgba(239, 68, 68);
- }
+#naman{
+    box-shadow: 0 5px 10px rgba(16,185,129);
+}
+#jatin{
+    box-shadow: 0 5px 10px rgba(239, 68, 68);
+}
 #nitish:hover{
     box-shadow: 0 10px 20px rgba(59, 130, 246)
 }

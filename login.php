@@ -4,6 +4,7 @@ if (isset($_SESSION["user"])) {
    header("Location: index11.php");
 }
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,9 +13,9 @@ if (isset($_SESSION["user"])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Form</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-    
+
     <style>
-       
+
 body {
     margin: 0;
     font-family: 'Arial', sans-serif;
@@ -84,11 +85,11 @@ body {
 .right-section {
     flex: 1.5;
     background: rgba(18, 18, 18, 0.9);
-    display: flex; 
-    justify-content: center; 
-    align-items: center; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: relative;
-    padding: 20px; 
+    padding: 20px;
     background-image: url(https://i.imgur.com/E417k13.png);
     opacity:1;
 
@@ -101,10 +102,10 @@ body {
     height: 100%;
     max-height: 500px;
     max-width: 600px;
-    background: url("https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Very_Black_screen.jpg/2560px-Very_Black_screen.jpg"); 
-    padding: 40px; 
+    background: url("https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Very_Black_screen.jpg/2560px-Very_Black_screen.jpg");
+    padding: 40px;
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     opacity: 0;
     transform: translateY(20px);
     transition: all 0.8s ease;
@@ -138,7 +139,7 @@ body {
     font-size: 14px;
     background: rgba(255, 255, 255, 0.1);
     color: #fff;
-    
+
 }
 
 .form-group input:focus {
@@ -181,13 +182,13 @@ a:hover {
     <div class="background">
 
     <div class="flex-container">
-      
+
         <div class="left-section">
             <img src="https://i.imgur.com/126cWea.gif" alt="WellBe">
             <p class="app-tagline">Connect. Reflect. Thrive.</p>
         </div>
 
-       
+
         <div class="right-section">
 
     <div class="container" id="loginForm">
@@ -203,8 +204,15 @@ a:hover {
                 if (password_verify($password, $user["password"])) {
                     session_start();
                     $_SESSION["user"] = "yes";
-                    header("Location: index11.php");
-                    die();
+                     $_SESSION["email"] = $user["email"];
+                    $_SESSION["full_name"] = $user["full_name"];
+
+                     header("Location: index11.php");
+                     die();
+
+
+
+
                 }else{
                     echo "<div class='alert alert-danger'>Password does not match</div>";
                 }

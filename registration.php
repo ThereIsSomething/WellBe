@@ -158,9 +158,7 @@ body {
     transition: background 0.3s ease, transform 0.2s ease;
 }
 
-.form-btn:hover {
-    background: linear-gradient(90deg, #ff0000, #6a11cb);
-    transform: scale(1.05);
+
 }
 
  a {
