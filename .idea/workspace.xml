@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f00d85b7-c488-41a3-805c-c95d2dcf5d92" name="Changes" comment="commits restoring">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" />
+    <list default="true" id="f00d85b7-c488-41a3-805c-c95d2dcf5d92" name="Changes" comment="commiting unversioned files">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -84,8 +83,8 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\nitis\OneDrive\Documents\GitHub\WellBe\login" />
       <recent name="C:\Users\nitis\OneDrive\Documents\GitHub\WellBe" />
+      <recent name="C:\Users\nitis\OneDrive\Documents\GitHub\WellBe\login" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\nitis\OneDrive\Documents\GitHub\WellBe" />
@@ -184,6 +183,9 @@
       <workItem from="1739861292792" duration="629000" />
       <workItem from="1739861927996" duration="700000" />
       <workItem from="1740022291268" duration="474000" />
+      <workItem from="1741322663094" duration="3021000" />
+      <workItem from="1741497225099" duration="26000" />
+      <workItem from="1741497289390" duration="123000" />
     </task>
     <task id="LOCAL-00001" summary="HTML and CSS added">
       <option name="closed" value="true" />
@@ -401,7 +403,23 @@
       <option name="project" value="LOCAL" />
       <updated>1739861538898</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="commits restoring">
+      <option name="closed" value="true" />
+      <created>1741324962625</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1741324962625</updated>
+    </task>
+    <task id="LOCAL-00029" summary="commiting unversioned files">
+      <option name="closed" value="true" />
+      <created>1741325064085</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1741325064085</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -435,6 +453,7 @@
     <MESSAGE value="index optimized" />
     <MESSAGE value="wellbe feedback background color updated" />
     <MESSAGE value="commits restoring" />
-    <option name="LAST_COMMIT_MESSAGE" value="commits restoring" />
+    <MESSAGE value="commiting unversioned files" />
+    <option name="LAST_COMMIT_MESSAGE" value="commiting unversioned files" />
   </component>
 </project>
