@@ -1,5 +1,7 @@
 https://github.com/ThereIsSomething/WellBe.git
 
+Project on HOLD due to lack of funding.......
+
 This app targets individuals such as young adults, working professionals, health conscious users, seeking mental support and tools to improve emotional, and overall mental wellbeing.
 
 HTML, CSS, JS and APIs, AI/ML(for Scaling purpose)
